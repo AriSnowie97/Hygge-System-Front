@@ -374,15 +374,27 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
+    padding-left: 0; /* Прибираємо стандартний зсув списку вправо */
+}
+
+.step {
+    position: relative;
+    padding-top: 10px; 
 }
 
 .step-number {
-    font-size: 2.5rem;
+    font-size: 4.5rem; /* Робимо цифри величезними і стильними */
     font-weight: 800;
-    color: #e9ecef;
-    margin-bottom: 10px;
+    color: #e9ecef; /* Дуже світлий сірий, як водяний знак */
+    line-height: 0.8; /* Притискаємо, щоб не було зайвого повітря зверху */
+    margin-bottom: 20px; /* ТОЙ САМИЙ ВІДСТУП ВІД ЦИФРИ ДО ТЕКСТУ */
+    display: block;
 }
 
+.step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
 /* === Блог === */
 .blog {
     padding: 100px 0;
