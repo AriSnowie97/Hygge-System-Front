@@ -538,12 +538,18 @@ button {
     padding: 30px 0;
 }
 
-/* === ЦЕНТРАЛЬНИЙ КОНТЕЙНЕР (ПОВЕРТАЄМО ВІДСТУПИ ПО БОКАХ) === */
+/* === ЖОРСТКИЙ КОНТРОЛЬ КОНТЕЙНЕРА === */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Додатково фіксимо секції, щоб вони не вилазили за екран на мобілках */
+section {
+    overflow-x: hidden;
 }
 
 /* === ПАНЕЛЬ ПЕРЕМИКАННЯ === */
