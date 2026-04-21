@@ -464,6 +464,14 @@ button {
     border-top: 1px solid rgba(255,255,255,0.3);
 }
 
+/* === ЦЕНТРАЛЬНИЙ КОНТЕЙНЕР (ПОВЕРТАЄМО ВІДСТУПИ ПО БОКАХ) === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
 /* === ПАНЕЛЬ ПЕРЕМИКАННЯ === */
 .theme-switcher { 
     position: fixed; 
