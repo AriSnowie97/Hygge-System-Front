@@ -533,3 +533,66 @@ fieldset {
         transform-origin: bottom right; 
     }
 }
+
+/* === ВЫПАДАЮЩЕЕ МЕНЮ (DROPDOWNS) === */
+.dropdown {
+    position: relative;
+}
+
+/* Скрываем подменю по умолчанию */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white; /* Фон меню (в стиле 2 и 3 можно заменить на свой) */
+    min-width: 180px;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+    flex-direction: column;
+    gap: 5px !important;
+}
+
+/* Показываем при наведении */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Стили для ссылок внутри подменю */
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0,0,0,0.05) !important; /* Легкое выделение при наведении */
+}
+
+/* Адаптив выпадающего меню для телефонов */
+@media (max-width: 992px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        display: none; /* Скрыто до клика/тапа */
+        padding: 5px 0;
+    }
+    
+    .dropdown:hover .dropdown-menu,
+    .dropdown:active .dropdown-menu {
+        display: flex;
+    }
+}
