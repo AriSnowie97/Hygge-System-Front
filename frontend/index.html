@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge System</title>
+    <link id="theme-link" rel="stylesheet" href="style-1.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="/" class="logo">Hygge<b>System</b></a>
+        
+        <nav>
+            <menu class="nav-links">
+                <li><a href="#problems">Проблеми</a></li>
+                <li><a href="#solution">Рішення</a></li>
+            </menu>
+        </nav>
+        
+        <button class="btn-primary">Консультація</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <article class="hero-content">
+                <h1>Надійне впровадження <br><span>SAP Business One</span></h1>
+                <p>Позбавляємо від хаосу в обліку. Перехід з 1С/BAS на міжнародне рішення для стабільного зростання.</p>
+                <menu class="hero-buttons">
+                    <li><button class="btn-primary">Безкоштовний аудит</button></li>
+                    <li><button class="btn-secondary">Дізнатися більше</button></li>
+                </menu>
+            </article>
+        </section>
+
+        <section class="problems" id="problems">
+            <h2>Знайомі проблеми?</h2>
+            <ul class="grid">
+                <li class="card">
+                    <span class="icon" aria-hidden="true">🌪️</span>
+                    <h3>Хаос в обліку</h3>
+                    <p>Дані розкидані по різних таблицях. Немає єдиної картини.</p>
+                </li>
+                <li class="card">
+                    <span class="icon" aria-hidden="true">❌</span>
+                    <h3>Помилки в даних</h3>
+                    <p>Через ручне введення виникають дублікати та втрати.</p>
+                </li>
+                <li class="card">
+                    <span class="icon" aria-hidden="true">⏳</span>
+                    <h3>Ручні процеси</h3>
+                    <p>Години на зведення звітів замість реальної аналітики.</p>
+                </li>
+                <li class="card">
+                    <span class="icon" aria-hidden="true">🛑</span>
+                    <h3>Залежність від 1С</h3>
+                    <p>Ризики старого софту та складнощі з інтеграціями.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <aside class="theme-switcher" aria-label="Вибір стилю дизайну">
+        <p>Оберіть концепт:</p>
+        <menu>
+            <li><button onclick="changeTheme('style-1.css')">1. Корпоративний</button></li>
+            <li><button onclick="changeTheme('style-2.css')">2. Glassmorphism</button></li>
+            <li><button onclick="changeTheme('style-3.css')">3. Brutalism</button></li>
+        </menu>
+    </aside>
+
+</body>
+</html>
