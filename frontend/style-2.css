@@ -276,6 +276,194 @@ button {
     color: white;
 }
 
+/* === Послуги === */
+.services {
+    padding: 100px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* === Чому ми === */
+.why-us {
+    padding: 100px 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+/* === Процес роботи === */
+.process-steps {
+    display: flex;
+    gap: 20px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.2;
+}
+
+/* === Блог === */
+.blog {
+    padding: 100px 0;
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.blog-image {
+    height: 200px;
+    background: rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-content {
+    padding: 30px;
+}
+
+.blog-tag {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.blog-content h3 {
+    margin: 15px 0;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #4a00e0;
+}
+
+/* === CTA Форма === */
+.cta {
+    padding: 100px 0;
+}
+
+.cta-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.cta-form {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
 /* === ПАНЕЛЬ ПЕРЕМИКАННЯ === */
 .theme-switcher { 
     position: fixed; 
