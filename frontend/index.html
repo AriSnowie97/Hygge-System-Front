@@ -24,14 +24,19 @@
 
     <main>
         <section class="hero">
-            <article class="hero-content">
-                <h1>Надійне впровадження <br><span>SAP Business One</span></h1>
-                <p>Позбавляємо від хаосу в обліку. Перехід з 1С/BAS на міжнародне рішення для стабільного зростання.</p>
-                <menu class="hero-buttons">
-                    <li><button class="btn-primary">Безкоштовний аудит</button></li>
-                    <li><button class="btn-secondary">Дізнатися більше</button></li>
-                </menu>
-            </article>
+            <div class="hero-container">
+                <article class="hero-content">
+                    <h1>Надійне впровадження <br><span>SAP Business One</span></h1>
+                    <p>Позбавляємо від хаосу в обліку. Перехід з 1С/BAS на міжнародне рішення для стабільного контролю та зростання вашого бізнесу.</p>
+                    <menu class="hero-buttons">
+                        <li><button class="btn-primary">Отримати консультацію</button></li>
+                        <li><button class="btn-secondary">Дізнатися більше</button></li>
+                    </menu>
+                </article>
+                <aside class="hero-visual">
+                    <div class="mockup-placeholder">Мокап системи SAP</div>
+                </aside>
+            </div>
         </section>
 
         <section class="problems" id="problems">
@@ -59,6 +64,66 @@
                 </li>
             </ul>
         </section>
+
+        <section class="solution" id="solution">
+            <h2>Рішення — SAP Business One</h2>
+            <p class="subtitle">Комплексне управління всіма процесами компанії в єдиній системі</p>
+            <ul class="solution-grid">
+                <li class="solution-item">
+                    <span class="icon">🌍</span>
+                    <h3>Міжнародний продукт</h3>
+                    <p>Найкращі світові практики управління бізнесом, адаптовані під законодавство України.</p>
+                </li>
+                <li class="solution-item">
+                    <span class="icon">📈</span>
+                    <h3>Масштабованість</h3>
+                    <p>Система зростає разом з вашим бізнесом без необхідності повної переробки ядра.</p>
+                </li>
+                <li class="solution-item">
+                    <span class="icon">🔍</span>
+                    <h3>Прозорість обліку</h3>
+                    <p>Єдина база даних виключає дублювання та дозволяє бачити реальний стан справ 24/7.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="comparison" id="comparison">
+            <h2>SAP Business One vs Локальні системи (1С/BAS)</h2>
+            <div class="table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Критерій</th>
+                            <th class="highlight">SAP Business One</th>
+                            <th>Локальні системи</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Комплексність рішення</td>
+                            <td class="highlight">✅ Все в одній системі (ERP)</td>
+                            <td>❌ Зоопарк різних програм</td>
+                        </tr>
+                        <tr>
+                            <td>Оновлення та розвиток</td>
+                            <td class="highlight">✅ Регулярні глобальні оновлення</td>
+                            <td>❌ Залежність від локальних доопрацювань</td>
+                        </tr>
+                        <tr>
+                            <td>Швидкодія та архітектура</td>
+                            <td class="highlight">✅ SAP HANA (обробка in-memory)</td>
+                            <td>❌ Повільна робота з великими базами</td>
+                        </tr>
+                        <tr>
+                            <td>Міжнародна звітність (IFRS)</td>
+                            <td class="highlight">✅ Вбудована "з коробки"</td>
+                            <td>❌ Потребує складних налаштувань</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
     </main>
     <aside class="theme-switcher" aria-label="Вибір стилю дизайну">
         <p>Оберіть концепт:</p>
@@ -68,6 +133,6 @@
             <li><button onclick="changeTheme('style-3.css')">3. Brutalism</button></li>
         </menu>
     </aside>
-
+<script src="script.js"></script>
 </body>
 </html>
