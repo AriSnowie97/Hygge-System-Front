@@ -481,19 +481,24 @@ fieldset {
     background: rgba(0,0,0,0.05) !important; /* Легкое выделение при наведении */
 }
 
-/* Адаптив выпадающего меню для телефонов */
+/* === ФІКС МОБІЛЬНОГО МЕНЮ (СТОВПЧИК) === */
 @media (max-width: 992px) {
-    .dropdown-menu {
-        position: static;
-        transform: none;
-        box-shadow: none;
-        background: transparent;
-        display: none; /* Скрыто до клика/тапа */
-        padding: 5px 0;
+    .nav-links {
+        flex-direction: column !important; /* Вишиковуємо пункти один під одним */
+        align-items: center !important;    /* Центруємо по горизонталі */
+        width: 100%;
     }
     
-    .dropdown:hover .dropdown-menu,
-    .dropdown:active .dropdown-menu {
+    .dropdown {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
     }
 }
