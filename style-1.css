@@ -21,7 +21,7 @@ body {
     line-height: 1.6; 
 }
 
-ul, menu { 
+ul, ol, menu { 
     list-style: none; 
 }
 
