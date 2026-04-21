@@ -3,262 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hygge System</title>
+    <title>Hygge System | Надійне впровадження SAP Business One</title>
+    <meta name="description" content="Перехід з 1С/BAS на міжнародне рішення SAP Business One для стабільного контролю та зростання вашого бізнесу.">
     <link id="theme-link" rel="stylesheet" href="style-1.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
-        <a href="/" class="logo">Hygge<b>System</b></a>
+        <a href="/" class="logo" aria-label="Головна сторінка Hygge System">
+            Hygge<strong>System</strong>
+        </a>
         
-        <nav>
-            <menu class="nav-links">
+        <nav aria-label="Головна навігація">
+            <ul class="nav-links">
                 <li><a href="#problems">Проблеми</a></li>
                 <li><a href="#solution">Рішення</a></li>
-            </menu>
+                <li><a href="#comparison">Порівняння</a></li>
+                <li><a href="#services">Послуги</a></li>
+            </ul>
         </nav>
         
-        <button class="btn-primary">Консультація</button>
+        <a href="#contacts" class="btn-primary">Консультація</a>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-container">
-                <article class="hero-content">
-                    <h1>Надійне впровадження <br><span>SAP Business One</span></h1>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <h1 id="hero-title">Надійне впровадження <br><span>SAP Business One</span></h1>
                     <p>Позбавляємо від хаосу в обліку. Перехід з 1С/BAS на міжнародне рішення для стабільного контролю та зростання вашого бізнесу.</p>
-                    <menu class="hero-buttons">
-                        <li><button class="btn-primary">Отримати консультацію</button></li>
-                        <li><button class="btn-secondary">Дізнатися більше</button></li>
-                    </menu>
-                </article>
-                <aside class="hero-visual">
+                    <ul class="hero-buttons">
+                        <li><a href="#contacts" class="btn-primary">Отримати консультацію</a></li>
+                        <li><a href="#solution" class="btn-secondary">Дізнатися більше</a></li>
+                    </ul>
+                </div>
+                <figure class="hero-visual">
                     <div class="mockup-placeholder">Мокап системи SAP</div>
-                </aside>
+                    <figcaption class="sr-only">Інтерфейс системи SAP Business One</figcaption>
+                </figure>
             </div>
         </section>
 
-        <section class="problems" id="problems">
-            <h2>Знайомі проблеми?</h2>
-            <ul class="grid">
-                <li class="card">
-                    <span class="icon" aria-hidden="true">🌪️</span>
-                    <h3>Хаос в обліку</h3>
-                    <p>Дані розкидані по різних таблицях. Немає єдиної картини.</p>
-                </li>
-                <li class="card">
-                    <span class="icon" aria-hidden="true">❌</span>
-                    <h3>Помилки в даних</h3>
-                    <p>Через ручне введення виникають дублікати та втрати.</p>
-                </li>
-                <li class="card">
-                    <span class="icon" aria-hidden="true">⏳</span>
-                    <h3>Ручні процеси</h3>
-                    <p>Години на зведення звітів замість реальної аналітики.</p>
-                </li>
-                <li class="card">
-                    <span class="icon" aria-hidden="true">🛑</span>
-                    <h3>Залежність від 1С</h3>
-                    <p>Ризики старого софту та складнощі з інтеграціями.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="solution" id="solution">
-            <h2>Рішення — SAP Business One</h2>
-            <p class="subtitle">Комплексне управління всіма процесами компанії в єдиній системі</p>
-            <ul class="solution-grid">
-                <li class="solution-item">
-                    <span class="icon">🌍</span>
-                    <h3>Міжнародний продукт</h3>
-                    <p>Найкращі світові практики управління бізнесом, адаптовані під законодавство України.</p>
-                </li>
-                <li class="solution-item">
-                    <span class="icon">📈</span>
-                    <h3>Масштабованість</h3>
-                    <p>Система зростає разом з вашим бізнесом без необхідності повної переробки ядра.</p>
-                </li>
-                <li class="solution-item">
-                    <span class="icon">🔍</span>
-                    <h3>Прозорість обліку</h3>
-                    <p>Єдина база даних виключає дублювання та дозволяє бачити реальний стан справ 24/7.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="comparison" id="comparison">
-            <h2>SAP Business One vs Локальні системи (1С/BAS)</h2>
-            <div class="table-wrapper">
-                <table class="compare-table">
-                    <thead>
-                        <tr>
-                            <th>Критерій</th>
-                            <th class="highlight">SAP Business One</th>
-                            <th>Локальні системи</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Комплексність рішення</td>
-                            <td class="highlight">✅ Все в одній системі (ERP)</td>
-                            <td>❌ Зоопарк різних програм</td>
-                        </tr>
-                        <tr>
-                            <td>Оновлення та розвиток</td>
-                            <td class="highlight">✅ Регулярні глобальні оновлення</td>
-                            <td>❌ Залежність від локальних доопрацювань</td>
-                        </tr>
-                        <tr>
-                            <td>Швидкодія та архітектура</td>
-                            <td class="highlight">✅ SAP HANA (обробка in-memory)</td>
-                            <td>❌ Повільна робота з великими базами</td>
-                        </tr>
-                        <tr>
-                            <td>Міжнародна звітність (IFRS)</td>
-                            <td class="highlight">✅ Вбудована "з коробки"</td>
-                            <td>❌ Потребує складних налаштувань</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <section class="services" id="services">
+        <!-- Problems Section -->
+        <section class="problems" id="problems" aria-labelledby="problems-title">
             <div class="container">
-                <h2>Наші послуги</h2>
-                <ul class="services-grid">
-                    <li class="service-card">
-                        <h3>Впровадження</h3>
-                        <p>Повний цикл запуску SAP Business One: від аналізу процесів до промислової експлуатації.</p>
+                <h2 id="problems-title">Знайомі проблеми?</h2>
+                <ul class="grid">
+                    <li class="card">
+                        <span class="icon" aria-hidden="true">🌪️</span>
+                        <h3>Хаос в обліку</h3>
+                        <p>Дані розкидані по різних таблицях. Немає єдиної картини.</p>
                     </li>
-                    <li class="service-card">
-                        <h3>Налаштування</h3>
-                        <p>Адаптація системи під специфіку вашого бізнесу та локальне законодавство.</p>
+                    <li class="card">
+                        <span class="icon" aria-hidden="true">❌</span>
+                        <h3>Помилки в даних</h3>
+                        <p>Через ручне введення виникають дублікати та втрати.</p>
                     </li>
-                    <li class="service-card">
-                        <h3>Доопрацювання</h3>
-                        <p>Розробка додаткових модулів та інтеграція зі сторонніми сервісами.</p>
+                    <li class="card">
+                        <span class="icon" aria-hidden="true">⏳</span>
+                        <h3>Ручні процеси</h3>
+                        <p>Години на зведення звітів замість реальної аналітики.</p>
                     </li>
-                    <li class="service-card">
-                        <h3>Підтримка</h3>
-                        <p>Технічний супровід та консультації користувачів після запуску системи.</p>
+                    <li class="card">
+                        <span class="icon" aria-hidden="true">🛑</span>
+                        <h3>Залежність від 1С</h3>
+                        <p>Ризики старого софту та складнощі з інтеграціями.</p>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="why-us" id="why-us">
+        <!-- Solution Section -->
+        <section class="solution" id="solution" aria-labelledby="solution-title">
             <div class="container">
-                <h2>Чому Hygge System?</h2>
-                <ul class="stats-grid">
-                    <li class="stat-item">
-                        <span class="stat-value">10+</span>
-                        <p>Років досвіду</p>
+                <hgroup>
+                    <h2 id="solution-title">Рішення — SAP Business One</h2>
+                    <p class="subtitle">Комплексне управління всіма процесами компанії в єдиній системі</p>
+                </hgroup>
+                <ul class="solution-grid">
+                    <li class="solution-item">
+                        <span class="icon" aria-hidden="true">🌍</span>
+                        <h3>Міжнародний продукт</h3>
+                        <p>Найкращі світові практики управління бізнесом, адаптовані під законодавство України.</p>
                     </li>
-                    <li class="stat-item">
-                        <span class="stat-value">50+</span>
-                        <p>Успішних проектів</p>
+                    <li class="solution-item">
+                        <span class="icon" aria-hidden="true">📈</span>
+                        <h3>Масштабованість</h3>
+                        <p>Система зростає разом з вашим бізнесом без необхідності повної переробки ядра.</p>
                     </li>
-                    <li class="stat-item">
-                        <span class="stat-value">100%</span>
-                        <p>Сертифікована команда</p>
-                    </li>
-                    <li class="stat-item">
-                        <span class="stat-value">SAP</span>
-                        <p>Офіційний партнер</p>
+                    <li class="solution-item">
+                        <span class="icon" aria-hidden="true">🔍</span>
+                        <h3>Прозорість обліку</h3>
+                        <p>Єдина база даних виключає дублювання та дозволяє бачити реальний стан справ 24/7.</p>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="process" id="process">
+        <!-- Comparison Table Section -->
+        <section class="comparison" id="comparison" aria-labelledby="comparison-title">
             <div class="container">
-                <h2>Етапи впровадження</h2>
-                <ul class="process-steps">
-                    <li class="step">
-                        <div class="step-number">01</div>
-                        <h3>Аудит</h3>
-                        <p>Детальний аналіз ваших бізнес-процесів та виявлення точок росту.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step-number">02</div>
-                        <h3>Проектування</h3>
-                        <p>Створення архітектури майбутньої системи та опис функціоналу.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step-number">03</div>
-                        <h3>Використання</h3>
-                        <p>Запуск системи, міграція даних та навчання персоналу.</p>
-                    </li>
-                    <li class="step">
-                        <div class="step-number">04</div>
-                        <h3>Підтримка</h3>
-                        <p>Стабільна робота системи та її подальший розвиток.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="blog" id="blog">
-            <div class="container">
-                <h2>Експертиза та аналітика</h2>
-                <ul class="blog-grid">
-                    <li class="blog-card">
-                        <div class="blog-image">Фото</div>
-                        <div class="blog-content">
-                            <span class="blog-tag">Кейс</span>
-                            <h3>Як ми прискорили обробку замовлень на 40%</h3>
-                            <p>Реальна історія міграції великого дистриб'ютора з 1С на SAP Business One.</p>
-                            <a href="#" class="read-more">Читати далі →</a>
-                        </div>
-                    </li>
-                    <li class="blog-card">
-                        <div class="blog-image">Фото</div>
-                        <div class="blog-content">
-                            <span class="blog-tag">Аналітика</span>
-                            <h3>Тренди ERP-систем в Україні</h3>
-                            <p>Чому локальний бізнес обирає міжнародні рішення та які інновації нас чекають.</p>
-                            <a href="#" class="read-more">Читати далі →</a>
-                        </div>
-                    </li>
-                </ul>
+                <h2 id="comparison-title">SAP Business One vs Локальні системи (1С/BAS)</h2>
+                <div class="table-wrapper" tabindex="0" aria-label="Таблиця порівняння систем">
+                    <table class="compare-table">
+                        <caption class="sr-only">Порівняння можливостей SAP Business One та локальних систем</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Критерій</th>
+                                <th scope="col" class="highlight">SAP Business One</th>
+                                <th scope="col">Локальні системи</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Комплексність рішення</th>
+                                <td class="highlight">✅ Все в одній системі (ERP)</td>
+                                <td>❌ Зоопарк різних програм</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Оновлення та розвиток</th>
+                                <td class="highlight">✅ Регулярні глобальні оновлення</td>
+                                <td>❌ Залежність від локальних доопрацювань</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Швидкодія та архітектура</th>
+                                <td class="highlight">✅ SAP HANA (обробка in-memory)</td>
+                                <td>❌ Повільна робота з великими базами</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Міжнародна звітність (IFRS)</th>
+                                <td class="highlight">✅ Вбудована "з коробки"</td>
+                                <td>❌ Потребує складних налаштувань</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section class="cta" id="contacts">
+        <!-- Contacts / CTA Section -->
+        <section class="cta" id="contacts" aria-labelledby="cta-title">
             <div class="container cta-wrapper">
-                <article class="cta-text">
-                    <h2>Готові позбутися хаосу?</h2>
-                    <p>Залиште заявку на <b>безкоштовний аудит</b> ваших бізнес-процесів. Ми проаналізуємо поточну систему та запропонуємо покроковий план переходу на SAP.</p>
-                </article>
+                <div class="cta-text">
+                    <h2 id="cta-title">Готові позбутися хаосу?</h2>
+                    <p>Залиште заявку на <strong>безкоштовний аудит</strong> ваших бізнес-процесів. Ми проаналізуємо поточну систему та запропонуємо покроковий план переходу на SAP.</p>
+                </div>
                 
                 <form class="cta-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Ім'я</label>
-                        <input type="text" id="name" name="name" placeholder="Олександр" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact">Телефон або Email</label>
-                        <input type="text" id="contact" name="contact" placeholder="+380... або email@domain.com" required>
-                    </div>
-                    <button type="submit" class="btn-primary btn-submit">Отримати аудит</button>
-                    <p class="form-note">Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</p>
+                    <fieldset>
+                        <legend class="sr-only">Форма заявки на аудит</legend>
+                        <div class="form-group">
+                            <label for="name">Ім'я</label>
+                            <input type="text" id="name" name="name" placeholder="Олександр" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Телефон або Email</label>
+                            <input type="text" id="contact" name="contact" placeholder="+380... або email@domain.com" required autocomplete="contact">
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Отримати аудит</button>
+                        <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small></p>
+                    </fieldset>
                 </form>
             </div>
         </section>
     </main>
-        <footer class="footer">
+
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Hygge System. Всі права захищені.</p>
+            <p><small>&copy; <time datetime="2026">2026</time> Hygge System. Всі права захищені.</small></p>
         </div>
     </footer>
+
+    <!-- Theme Switcher -->
     <aside class="theme-switcher" aria-label="Вибір стилю дизайну">
         <p>Оберіть концепт:</p>
-        <menu>
-            <li><button onclick="changeTheme('style-1.css')">1. Корпоративний</button></li>
-            <li><button onclick="changeTheme('style-2.css')">2. Glassmorphism</button></li>
-            <li><button onclick="changeTheme('style-3.css')">3. Brutalism</button></li>
-        </menu>
+        <form>
+            <fieldset style="border:none; padding:0; margin:0;">
+                <legend class="sr-only">Перемикач тем</legend>
+                <ul class="theme-list">
+                    <li><button type="button" onclick="changeTheme('style-1.css')">1. Корпоративний</button></li>
+                    <li><button type="button" onclick="changeTheme('style-2.css')">2. Glassmorphism</button></li>
+                    <li><button type="button" onclick="changeTheme('style-3.css')">3. Brutalism</button></li>
+                </ul>
+            </fieldset>
+        </form>
     </aside>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
