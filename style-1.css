@@ -460,64 +460,37 @@ fieldset {
     margin: 0;
 }
 
-/* === АДАПТИВ (МЕДІА-ЗАПИТИ) === */
-@media (max-width: 992px) {
-    .hero-container, 
-    .cta-wrapper { 
-        grid-template-columns: 1fr; 
-        text-align: center; 
-        gap: 30px; 
-    }
-    
-    .hero h1 { 
-        font-size: 2.8rem; 
-    }
-    
-    .hero-buttons { 
-        justify-content: center; 
-    }
-    
-    .solution-grid { 
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    }
-    
-    .navbar { 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 15px; 
-        padding: 15px; 
-    }
-    
-    .nav-links { 
-        width: 100%; 
-        justify-content: center; 
-        margin-bottom: 10px; 
-    }
-}
-
+/* === МОБІЛЬНА АДАПТАЦІЯ (STYLE 1) === */
 @media (max-width: 768px) {
-    .hero h1 { 
-        font-size: 2.2rem; 
+    .hero h1 {
+        font-size: 2.2rem !important; /* Зменшуємо заголовок */
     }
-    
-    .cta-text h2 { 
-        font-size: 2.2rem; 
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
     }
-    
-    .hero-buttons { 
-        flex-direction: column; 
+
+    .hero-buttons {
+        justify-content: center;
     }
-    
-    .btn-primary, 
-    .btn-secondary { 
-        width: 100%; 
+
+    .mockup-placeholder {
+        height: 250px; /* Менший мокап на мобілках */
     }
-    
-    .theme-switcher { 
-        padding: 15px; 
-        bottom: 10px; 
-        right: 10px; 
-        transform: scale(0.9); 
-        transform-origin: bottom right; 
+
+    /* Робимо таблицю скролабельною, щоб не ламала верстку */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .compare-table {
+        min-width: 600px; /* Тиснемо таблицю, щоб її можна було гортати пальцем */
+    }
+
+    .cta-wrapper {
+        grid-template-columns: 1fr;
     }
 }
