@@ -1,12 +1,21 @@
 /* === ПЕРЕМЕННЫЕ === */
 :root {
-    --glass-bg: rgba(255, 255, 255, 0.2);
-    --glass-border: rgba(255, 255, 255, 0.4);
-    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    /* Фони */
+    --bg-white: #ffffff;
+    --bg-light-blue: #f2f7fc; /* Той самий дуже легкий синій */
+    
+    /* Акценти (насичений синій -> фіолетовий) */
+    --accent-blue: #0047FF;
+    --accent-gradient: linear-gradient(135deg, #0047FF 0%, #8A2BE2 100%);
+    
+    /* Скло */
+    --glass-bg: rgba(255, 255, 255, 0.65); /* Робимо скло більш білим та чистим */
+    --glass-border: rgba(255, 255, 255, 0.9);
+    --glass-shadow: 0 10px 30px rgba(0, 71, 255, 0.08); /* Легка синя тінь замість сірої */
     --blur: blur(15px);
-    --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-    --accent: #4a00e0;
+    
     --text-color: #1a1a1a;
+    --text-muted: #555555;
 }
 
 /* === БАЗОВЫЕ НАСТРОЙКИ === */
@@ -18,8 +27,7 @@
 }
 
 body { 
-    background: var(--bg-gradient);
-    background-attachment: fixed;
+    background: var(--bg-white); /* Прибрали глобальний фіолетовий фон */
     color: var(--text-color); 
     line-height: 1.6; 
 }
@@ -75,14 +83,16 @@ button,
 }
 
 .btn-primary { 
-    background: rgba(255, 255, 255, 0.8);
-    color: var(--accent);
-    box-shadow: var(--glass-shadow);
+    background: var(--accent-gradient);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.25);
+    border: none;
 }
 
 .btn-primary:hover { 
-    background: #ffffff;
+    background: linear-gradient(135deg, #0033cc 0%, #6a1b9a 100%);
     transform: translateY(-3px);
+    color: #ffffff;
 }
 
 .btn-secondary { 
@@ -116,7 +126,9 @@ button,
 }
 
 .logo strong { 
-    color: var(--accent); 
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links { 
@@ -199,6 +211,12 @@ h2 {
     text-align: center; 
     font-size: 2.5rem; 
     margin-bottom: 50px; 
+    /* Додаємо градієнт на текст */
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    width: 100%;
 }
 
 .grid, 
@@ -231,6 +249,7 @@ h2 {
     font-size: 3rem; 
     display: block; 
     margin-bottom: 20px; 
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Додає об'єм емодзі */
 }
 
 /* === ТАБЛИЦА === */
@@ -260,8 +279,8 @@ h2 {
 }
 
 .compare-table th.highlight { 
-    background: var(--accent); 
-    color: white; 
+    background: var(--accent-gradient); /* Використовуємо наш новий крутий градієнт */
+    color: #ffffff; 
 }
 
 /* === CTA ФОРМА === */
@@ -585,6 +604,32 @@ fieldset {
 }
 
 /* Прибираємо лінію в останньому рядку, щоб вона не дублювала нижню рамку таблиці */
+/* Прибираємо лінію в останньому рядку для ВСІХ комірок (і th, і td) */
+.compare-table tbody tr:last-child th,
 .compare-table tbody tr:last-child td {
     border-bottom: none !important;
+}
+
+/* === ЧЕРЕГУВАННЯ ФОНІВ СЕКЦІЙ === */
+.hero, .services, .cta {
+    background: var(--bg-light-blue);
+}
+
+.problems, .solution, .comparison {
+    background: var(--bg-white);
+}
+
+/* === ФІКС КОНТУРІВ ТАБЛИЦІ (Скло на білому фоні) === */
+.compare-table {
+    /* Легкий градієнт на фон самої таблиці, щоб виділити її на білому */
+    background: linear-gradient(135deg, #ffffff 0%, #f2f7fc 100%) !important; 
+    /* Ніжний синій контур навколо таблиці */
+    border: 1px solid rgba(0, 71, 255, 0.15) !important; 
+    box-shadow: 0 15px 40px rgba(0, 71, 255, 0.05) !important; /* Легка тінь для об'єму */
+}
+
+/* Робимо лінії між рядками видимими */
+.compare-table th, 
+.compare-table td { 
+    border-bottom: 1px solid rgba(0, 71, 255, 0.08) !important; 
 }
