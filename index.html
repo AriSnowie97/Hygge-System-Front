@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hygge System | Надійне впровадження SAP Business One</title>
     <meta name="description" content="Перехід з 1С/BAS на міжнародне рішення SAP Business One для стабільного контролю та зростання вашого бізнесу.">
-    <link id="theme-link" rel="stylesheet" href="style-1.css"> 
+    <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="navbar">
+    <header class="navbar">
         <a href="/" class="logo">
             Hygge<strong>System</strong>
         </a>
@@ -44,8 +44,8 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-container container">
                 <div class="hero-content">
@@ -63,7 +63,6 @@
             </div>
         </section>
 
-        <!-- Problems Section -->
         <section class="problems" id="problems" aria-labelledby="problems-title">
             <div class="container">
                 <h2 id="problems-title">Знайомі проблеми?</h2>
@@ -92,7 +91,6 @@
             </div>
         </section>
 
-        <!-- Solution Section -->
         <section class="solution" id="solution" aria-labelledby="solution-title">
             <div class="container">
                 <hgroup>
@@ -119,7 +117,6 @@
             </div>
         </section>
 
-        <!-- Comparison Table Section -->
         <section class="comparison" id="comparison" aria-labelledby="comparison-title">
             <div class="container">
                 <h2 id="comparison-title">SAP Business One vs Локальні системи (1С/BAS)</h2>
@@ -160,7 +157,6 @@
             </div>
         </section>
 
-        <!-- Contacts / CTA Section -->
         <section class="cta" id="contacts" aria-labelledby="cta-title">
             <div class="container cta-wrapper">
                 <div class="cta-text">
@@ -169,7 +165,7 @@
                 </div>
                 
                 <form class="cta-form" action="#" method="POST">
-                    <fieldset>
+                    <fieldset style="border:none; padding:0; margin:0;">
                         <legend class="sr-only">Форма заявки на аудит</legend>
                         <div class="form-group">
                             <label for="name">Ім'я</label>
@@ -192,21 +188,6 @@
             <p><small>&copy; <time datetime="2026">2026</time> Hygge System. Всі права захищені.</small></p>
         </div>
     </footer>
-
-    <!-- Theme Switcher -->
-    <aside class="theme-switcher" aria-label="Вибір стилю дизайну">
-        <p>Оберіть концепт:</p>
-        <form>
-            <fieldset style="border:none; padding:0; margin:0;">
-                <legend class="sr-only">Перемикач тем</legend>
-                <ul class="theme-list">
-                    <li><button type="button" onclick="changeTheme('style-1.css')">1. Корпоративний</button></li>
-                    <li><button type="button" onclick="changeTheme('style-2.css')">2. Glassmorphism</button></li>
-                    <li><button type="button" onclick="changeTheme('style-3.css')">3. Brutalism</button></li>
-                </ul>
-            </fieldset>
-        </form>
-    </aside>
 
     <script src="script.js"></script>
 </body>

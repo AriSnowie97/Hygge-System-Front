@@ -318,47 +318,54 @@ h2 {
     border-top: 1px solid var(--glass-border); 
 }
 
-/* === ПЕРЕКЛЮЧАТЕЛЬ ТЕМ === */
-.theme-switcher { 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    background: rgba(0, 0, 0, 0.7); 
-    backdrop-filter: var(--blur);
-    padding: 20px; 
-    border-radius: 16px; 
-    z-index: 9999; 
-    color: white;
+/* === ФІКС ТЕКСТІВ ПІД ЗАГОЛОВКАМИ (Рішення та CTA) === */
+
+/* 1. Секція "Рішення" */
+.solution hgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; /* Загальний відступ до карток */
 }
 
-.theme-switcher p { 
-    margin-bottom: 12px; 
-    font-size: 0.85rem; 
-    font-weight: 600; 
-    text-transform: uppercase;
-    color: #ccc;
+/* Прибираємо велику "дірку" між H2 і текстом під ним */
+.solution h2,
+.cta-text h2 {
+    margin-bottom: 15px !important; 
 }
 
-.theme-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
+/* Центруємо підзаголовок */
+.solution .subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 0 !important;
 }
 
-.theme-switcher button { 
-    background: rgba(255, 255, 255, 0.1); 
-    color: white; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    width: 100%; 
-    text-align: left; 
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.3s;
+/* 2. Секція CTA (Внизу біля форми) */
+.cta-text h2 {
+    text-align: left; /* На ПК заголовок біля форми має бути зліва */
 }
 
-.theme-switcher button:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
+.cta-text p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* === ФІКС ТЕКСТУ ПІД КНОПКОЮ У ФОРМІ === */
+.cta-form .form-note {
+    text-align: center !important;
+    margin-top: 15px !important; /* Відступ від кнопки */
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Адаптив для CTA тексту на мобільних (центруємо) */
+@media (max-width: 992px) {
+    .cta-text h2 {
+        text-align: center;
+    }
 }
 
 fieldset {
