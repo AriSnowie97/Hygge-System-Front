@@ -239,17 +239,29 @@ h2 {
     transition: transform 0.3s ease; 
 }
 
+/* === АНІМАЦІЯ КАРТОК ПРИ НАВЕДЕННІ === */
 .card:hover, 
-.service-card:hover { 
-    transform: translateY(-8px); 
-    background: rgba(255, 255, 255, 0.3);
+.service-card:hover, 
+.solution-item:hover { 
+    transform: translateY(-10px); /* Сама картка підстрибує на 10 пікселів */
+    box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12); /* Тінь стає більшою і м'якшою */
+    background: rgba(255, 255, 255, 0.8); /* Скло стає трохи білішим/яскравішим */
+    border: 1px solid rgba(0, 71, 255, 0.15); /* Злегка підсвічуємо рамку синім */
 }
 
+/* === ІКОНКИ-ЕМОДЗІ З ОБ'ЄМОМ === */
 .icon { 
-    font-size: 3rem; 
+    font-size: 3.5rem; /* Великий розмір */
     display: block; 
     margin-bottom: 20px; 
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Додає об'єм емодзі */
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Даємо легкий 3D-об'єм */
+    transition: transform 0.3s ease;
+}
+
+/* Анімація: іконка трохи підстрибує при наведенні на картку */
+.card:hover .icon,
+.solution-item:hover .icon {
+    transform: translateY(-8px) scale(1.05);
 }
 
 /* === ТАБЛИЦА === */
@@ -529,14 +541,38 @@ fieldset {
     }
 }
 /* === БУРГЕР-МЕНЮ (ГЛОБАЛЬНІ СТИЛІ) === */
+/* === АНІМОВАНИЙ БУРГЕР-ХРЕСТИК === */
 .burger-btn {
-    display: none;
+    display: none; /* Показується тільки на мобільних через @media */
     background: transparent;
     border: none;
-    font-size: 2.2rem;
     cursor: pointer;
-    color: inherit;
-    padding: 0 10px;
+    z-index: 1000; /* Щоб хрестик був поверх відкритого меню */
+    padding: 5px;
+}
+
+/* Малюємо три смужки */
+.burger-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: var(--accent-blue);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out; /* Плавна анімація */
+}
+
+/* Анімація перетворення на хрестик (коли додається клас toggle) */
+.burger-btn.toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg); /* Верхня лінія падає і крутиться */
+}
+
+.burger-btn.toggle span:nth-child(2) {
+    opacity: 0; /* Середня лінія зникає */
+}
+
+.burger-btn.toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg); /* Нижня лінія піднімається і крутиться */
 }
 
 /* === ОНОВЛЕНИЙ АДАПТИВ ДЛЯ ШАПКИ (Тільки мобілки) === */
