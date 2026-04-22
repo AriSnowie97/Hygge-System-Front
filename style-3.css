@@ -530,3 +530,29 @@ h2 {
     opacity: 0.8;
     margin-top: 10px;
 }
+
+/* === ФІКС ТАБЛИЦІ ДЛЯ 3 СТИЛЮ (Рівні стики рамок) === */
+.compare-table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Робимо так, щоб рамки комірок не двоїлися */
+.compare-table th, 
+.compare-table td {
+    border-bottom: var(--border-width) solid var(--black) !important;
+    border-right: var(--border-width) solid var(--black) !important;
+    border-top: none !important;
+    border-left: none !important;
+}
+
+/* Прибираємо лінію в крайніх правих комірках, щоб не дублювати головну рамку */
+.compare-table th:last-child,
+.compare-table td:last-child {
+    border-right: none !important;
+}
+
+/* Прибираємо лінію в самому низу таблиці */
+.compare-table tbody tr:last-child td {
+    border-bottom: none !important;
+}

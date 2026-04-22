@@ -550,3 +550,34 @@ fieldset {
         border-top: 1px solid rgba(128, 128, 128, 0.3); /* Розділювач */
     }
 }
+
+/* === ФІКС ПІДЗАГОЛОВКА В РІШЕННЯХ (Стиль 2) === */
+.solution hgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.solution h2 {
+    margin-bottom: 10px !important; /* Робимо відступ між заголовком і текстом меншим */
+}
+
+.solution .subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0 !important;
+}
+
+/* === ФІКС ТАБЛИЦІ (Прибираємо гострі "зайві" лінії по кутах) === */
+.compare-table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Прибираємо лінію в останньому рядку, щоб вона не дублювала нижню рамку таблиці */
+.compare-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
