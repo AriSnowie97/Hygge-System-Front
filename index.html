@@ -50,7 +50,7 @@
     </header>
 
     <main>
-        <section class="hero" aria-labelledby="hero-title">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero-container container">
                 <div class="hero-content">
                     <h1 id="hero-title">Надійне впровадження <br><span>SAP Business One</span></h1>
@@ -72,19 +72,31 @@
                 <h2 id="problems-title">Знайомі проблеми?</h2>
                 <ul class="grid">
                     <li class="card">
-                        <span class="icon" aria-hidden="true">🗂️</span> <h3>Хаос в обліку</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3>Хаос в обліку</h3>
                         <p>Дані розкидані по різних таблицях. Немає єдиної картини.</p>
                     </li>
                     <li class="card">
-                        <span class="icon" aria-hidden="true">⚠️</span> <h3>Помилки в даних</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+                        </div>
+                        <h3>Помилки в даних</h3>
                         <p>Через ручне введення виникають дублікати та втрати.</p>
                     </li>
                     <li class="card">
-                        <span class="icon" aria-hidden="true">⚙️</span> <h3>Ручні процеси</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3>Ручні процеси</h3>
                         <p>Години на зведення звітів замість реальної аналітики.</p>
                     </li>
                     <li class="card">
-                        <span class="icon" aria-hidden="true">⛓️</span> <h3>Залежність від 1С</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3>Залежність від 1С</h3>
                         <p>Ризики старого софту та складнощі з інтеграціями.</p>
                     </li>
                 </ul>
@@ -99,15 +111,24 @@
                 </hgroup>
                 <ul class="solution-grid">
                     <li class="solution-item">
-                        <span class="icon" aria-hidden="true">🌐</span> <h3>Міжнародний продукт</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        </div>
+                        <h3>Міжнародний продукт</h3>
                         <p>Найкращі світові практики управління бізнесом, адаптовані під законодавство України.</p>
                     </li>
                     <li class="solution-item">
-                        <span class="icon" aria-hidden="true">🚀</span> <h3>Масштабованість</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <h3>Масштабованість</h3>
                         <p>Система зростає разом з вашим бізнесом без необхідності повної переробки ядра.</p>
                     </li>
                     <li class="solution-item">
-                        <span class="icon" aria-hidden="true">💎</span> <h3>Прозорість обліку</h3>
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <h3>Прозорість обліку</h3>
                         <p>Єдина база даних виключає дублювання та дозволяє бачити реальний стан справ 24/7.</p>
                     </li>
                 </ul>
@@ -116,10 +137,9 @@
 
         <section class="comparison" id="comparison" aria-labelledby="comparison-title">
             <div class="container">
-                <h2 id="comparison-title">SAP Business One vs Локальні системи (1С/BAS)</h2>
-                <div class="table-wrapper" tabindex="0" aria-label="Таблиця порівняння систем">
+                <h2 id="comparison-title">SAP Business One vs Локальні системи</h2>
+                <div class="table-wrapper" tabindex="0">
                     <table class="compare-table">
-                        <caption class="sr-only">Порівняння можливостей SAP Business One та локальних систем</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Критерій</th>
@@ -136,17 +156,17 @@
                             <tr>
                                 <th scope="row">Оновлення та розвиток</th>
                                 <td class="highlight">✅ Регулярні глобальні оновлення</td>
-                                <td>❌ Залежність від локальних доопрацювань</td>
+                                <td>❌ Залежність від доопрацювань</td>
                             </tr>
                             <tr>
-                                <th scope="row">Швидкодія та архітектура</th>
-                                <td class="highlight">✅ SAP HANA (обробка in-memory)</td>
-                                <td>❌ Повільна робота з великими базами</td>
+                                <th scope="row">Швидкодія</th>
+                                <td class="highlight">✅ SAP HANA (in-memory)</td>
+                                <td>❌ Повільна робота з базами</td>
                             </tr>
                             <tr>
-                                <th scope="row">Міжнародна звітність (IFRS)</th>
+                                <th scope="row">Звітність (IFRS)</th>
                                 <td class="highlight">✅ Вбудована "з коробки"</td>
-                                <td>❌ Потребує складних налаштувань</td>
+                                <td>❌ Складні налаштування</td>
                             </tr>
                         </tbody>
                     </table>
@@ -158,19 +178,19 @@
             <div class="container cta-wrapper">
                 <div class="cta-text">
                     <h2 id="cta-title">Готові позбутися хаосу?</h2>
-                    <p>Залиште заявку на <strong>безкоштовний аудит</strong> ваших бізнес-процесів. Ми проаналізуємо поточну систему та запропонуємо покроковий план переходу на SAP.</p>
+                    <p>Залиште заявку на безкоштовний аудит ваших бізнес-процесів від наших експертів.</p>
                 </div>
                 
                 <form class="cta-form" action="#" method="POST">
                     <fieldset style="border:none; padding:0; margin:0;">
-                        <legend class="sr-only">Форма заявки на аудит</legend>
+                        <legend class="sr-only">Форма заявки</legend>
                         <div class="form-group">
                             <label for="name">Ім'я</label>
-                            <input type="text" id="name" name="name" placeholder="Олександр" required autocomplete="name">
+                            <input type="text" id="name" name="name" placeholder="Олександр" required>
                         </div>
                         <div class="form-group">
                             <label for="contact">Телефон або Email</label>
-                            <input type="text" id="contact" name="contact" placeholder="+380... або email@domain.com" required autocomplete="contact">
+                            <input type="text" id="contact" name="contact" placeholder="+380... або email" required>
                         </div>
                         <button type="submit" class="btn-primary btn-submit">Отримати аудит</button>
                         <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small></p>
@@ -182,7 +202,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p><small>&copy; <time datetime="2026">2026</time> Hygge System. Всі права захищені.</small></p>
+            <p><small>&copy; 2026 Hygge System. Всі права захищені.</small></p>
         </div>
     </footer>
 

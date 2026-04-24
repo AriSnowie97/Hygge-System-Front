@@ -69,30 +69,27 @@ section {
 
 /* === КНОПКИ (Стеклянные) === */
 button, 
-.btn-primary, 
-.btn-secondary { 
-    padding: 14px 28px; 
-    border-radius: 50px; 
-    font-weight: 600; 
-    font-size: 1rem; 
+/* === ГЕОМЕТРІЯ КНОПОК (КОРПОРАТИВНИЙ ЗАТИШОК) === */
+.btn-primary, .btn-secondary { 
+    padding: 15px 35px; 
+    border-radius: 10px; /* Суворий, але м'який радіус */
+    font-weight: 700; 
+    letter-spacing: 0.5px;
     cursor: pointer; 
-    border: none; 
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
-    text-align: center;
 }
 
-.btn-primary { 
-    background: var(--accent-gradient);
+.btn-primary {
+    background: linear-gradient(135deg, #0047FF 0%, #D500F9 100%);
     color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.25);
     border: none;
+    box-shadow: 0 8px 25px rgba(0, 71, 255, 0.2);
 }
 
-.btn-primary:hover { 
-    background: linear-gradient(135deg, #0033cc 0%, #6a1b9a 100%);
+.btn-primary:hover {
     transform: translateY(-3px);
-    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 71, 255, 0.3);
 }
 
 .btn-secondary { 
@@ -207,16 +204,17 @@ button,
     padding: 100px 0; 
 }
 
+/* === ПОСИЛЕНИЙ ГРАДІЄНТ ДЛЯ ЗАГОЛОВКІВ === */
 h2 { 
     text-align: center; 
-    font-size: 2.5rem; 
+    font-size: 2.8rem; 
     margin-bottom: 50px; 
-    /* Додаємо градієнт на текст */
-    background: var(--accent-gradient);
+    /* Контрастний градієнт: від надійного синього до яскравого фіолетового */
+    background: linear-gradient(135deg, #0047FF 0%, #D500F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
-    width: 100%;
+    line-height: 1.2;
+    font-weight: 800;
 }
 
 .grid, 
@@ -250,12 +248,32 @@ h2 {
 }
 
 /* === ІКОНКИ-ЕМОДЗІ З ОБ'ЄМОМ === */
-.icon { 
-    font-size: 3.5rem; /* Великий розмір */
-    display: block; 
-    margin-bottom: 20px; 
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Даємо легкий 3D-об'єм */
-    transition: transform 0.3s ease;
+/* === ПРЕМІАЛЬНІ ІКОНКИ-КОНТЕЙНЕРИ === */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 71, 255, 0.05); /* Ледь помітний синій фон */
+    color: var(--accent-blue);
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 71, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.icon-wrapper svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Ефект при наведенні на картку */
+.card:hover .icon-wrapper,
+.solution-item:hover .icon-wrapper {
+    background: #ffffff;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0, 71, 255, 0.15);
 }
 
 /* Анімація: іконка трохи підстрибує при наведенні на картку */
