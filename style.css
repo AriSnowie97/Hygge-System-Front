@@ -335,3 +335,460 @@ fieldset { border: none; padding: 0; margin: 0; }
     h2 { font-size: 2.2rem; margin-bottom: 30px; }
     section { padding: 60px 0; }
 }
+
+/* =======================================================
+   ЗИГЗАГ ДЛЯ ПК ТА ГІБРИДНІ КАРТКИ ДЛЯ МОБІЛЬНИХ
+   ======================================================= */
+.zigzag-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.zigzag-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.zigzag-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.zigzag-image, .zigzag-text {
+    flex: 1;
+}
+
+/* Велика плашка на ПК */
+.placeholder-box {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 24px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+}
+
+.zigzag-row:hover .placeholder-box {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12);
+}
+
+.placeholder-box svg {
+    width: 90px;
+    height: 90px;
+    color: var(--accent-blue);
+}
+
+.zigzag-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.zigzag-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* === МАГІЯ ДЛЯ МОБІЛОК: ПЕРЕТВОРЮЄМО ЗИГЗАГ НА КАРТКИ === */
+@media (max-width: 992px) {
+    .zigzag-wrapper {
+        gap: 30px; /* Відстань між картками */
+    }
+    
+    .zigzag-row, .zigzag-row.reverse {
+        flex-direction: column; /* Текст під картинкою */
+        background: var(--glass-bg); /* Даємо фон всій послузі, як у картки */
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 30px 20px;
+        gap: 15px;
+        text-align: center;
+        box-shadow: var(--glass-shadow);
+    }
+
+    /* Ховаємо величезний порожній квадрат */
+    .placeholder-box {
+        height: auto; 
+        background: transparent; 
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    /* Робимо іконку в стилі маленьких квадратиків (як у секції "Проблеми") */
+    .placeholder-box svg {
+        width: 32px;
+        height: 32px;
+        background: rgba(0, 71, 255, 0.05);
+        padding: 15px;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 71, 255, 0.1);
+        box-sizing: content-box;
+    }
+
+    .zigzag-text h3 {
+        font-size: 1.5rem;
+    }
+}
+/* Адаптив для телефонів та планшетів */
+@media (max-width: 992px) {
+    .zigzag-row, 
+    .zigzag-row.reverse {
+        flex-direction: column; /* Ставимо одне під одним */
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .placeholder-box {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+/* === ФІКС МАСШТАБУ ЗИГЗАГУ ДЛЯ МОБІЛОК === */
+@media (max-width: 992px) {
+    .zigzag-wrapper {
+        gap: 50px; /* Зменшуємо загальну відстань між різними послугами */
+    }
+    
+    .zigzag-row, 
+    .zigzag-row.reverse {
+        gap: 20px; /* Зменшуємо відступ між картинкою і текстом всередині однієї послуги */
+    }
+    
+    .placeholder-box {
+        height: 160px; /* Робимо блок акуратним і не високим */
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    .placeholder-box svg {
+        width: 60px; /* Трохи зменшуємо саму іконку */
+        height: 60px;
+    }
+    
+    .zigzag-text h3 {
+        font-size: 1.6rem; /* Робимо заголовок трохи меншим для телефону */
+        margin-bottom: 10px;
+    }
+    
+    .zigzag-text p {
+        font-size: 1rem;
+    }
+}
+
+/* === МАГІЯ ДЛЯ МОБІЛОК: ПЕРЕТВОРЮЄМО ЗИГЗАГ НА КАРТКИ === */
+@media (max-width: 992px) {
+    .zigzag-wrapper {
+        gap: 30px; /* Відстань між картками */
+    }
+    
+    .zigzag-row, .zigzag-row.reverse {
+        flex-direction: column; /* Текст під картинкою */
+        background: var(--glass-bg); /* Даємо фон всій послузі, як у картки */
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 30px 20px;
+        gap: 15px;
+        text-align: center;
+        box-shadow: var(--glass-shadow);
+    }
+
+    /* Ховаємо величезний порожній квадрат */
+    .placeholder-box {
+        height: auto; 
+        background: transparent; 
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    /* Робимо іконку в стилі маленьких квадратиків (як у секції "Проблеми") */
+    .placeholder-box svg {
+        width: 32px;
+        height: 32px;
+        background: rgba(0, 71, 255, 0.05);
+        padding: 15px;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 71, 255, 0.1);
+        box-sizing: content-box;
+    }
+
+    .zigzag-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =======================================================
+   ВЕРТИКАЛЬНИЙ ТАЙМЛАЙН (ЕТАПИ ВПРОВАДЖЕННЯ)
+   ======================================================= */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 50px; /* Місце для лінії зліва */
+}
+
+/* Сама вертикальна лінія */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 19px; /* Центруємо лінію рівно під кружечками */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 71, 255, 0.2); /* Напівпрозора синя лінія */
+}
+
+/* Картка етапу */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* При наведенні картка трохи зсувається вправо */
+.timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 35px rgba(0, 71, 255, 0.12);
+    border-color: rgba(0, 71, 255, 0.15);
+}
+
+/* Кружечок з цифрою, що висить на лінії */
+.timeline-number {
+    position: absolute;
+    left: -70px; /* Виносимо цифру за межі картки, прямо на лінію */
+    top: 25px; 
+    width: 40px;
+    height: 40px;
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(0, 71, 255, 0.3);
+    z-index: 2; /* Щоб кружечок був поверх лінії */
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.timeline-content p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* === Адаптив Таймлайну для телефонів === */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 35px; /* Зменшуємо відступ зліва */
+    }
+    
+    .timeline::before {
+        left: 14px; /* Зсуваємо лінію */
+    }
+    
+    .timeline-item {
+        padding: 20px;
+    }
+    
+    .timeline-number {
+        left: -50px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* =======================================================
+   РЯД ЛОГОТИПІВ (СЕКЦІЯ ІНТЕГРАЦІЇ)
+   ======================================================= */
+.logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    height: 90px;
+    min-width: 200px;
+    padding: 0 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    
+    /* Стилі для текстового логотипу-заглушки */
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #999999; /* Сірі в спокійному стані */
+    letter-spacing: 0.5px;
+}
+
+/* Ефект "оживання" при наведенні на логотип */
+.logo-card:hover {
+    transform: translateY(-8px);
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 71, 255, 0.1);
+    border-color: rgba(0, 71, 255, 0.15);
+}
+
+/* Фірмові кольори брендів при наведенні */
+.logo-card.brand-vchasno:hover { color: #0047FF; }      /* Синій Вчасно */
+.logo-card.brand-medoc:hover { color: #0056A4; }        /* Темно-синій Медок */
+.logo-card.brand-keycrm:hover { color: #2A68E8; }       /* Синій KeyCRM */
+.logo-card.brand-privat:hover { color: #66AC33; }       /* Зелений ПриватБанк */
+.logo-card.brand-sota:hover { color: #E30A17; }         /* Червоний СОТА */
+
+/* === Підготовка для реальних картинок (на майбутнє) === */
+.logo-card img {
+    max-height: 40px;
+    max-width: 100%;
+    filter: grayscale(100%) opacity(60%); /* Робимо картинки сірими */
+    transition: all 0.4s ease;
+}
+
+.logo-card:hover img {
+    filter: grayscale(0%) opacity(100%); /* Повертаємо колір картинкам при наведенні */
+}
+
+/* Адаптив для телефонів */
+@media (max-width: 768px) {
+    .logos-row {
+        gap: 15px;
+    }
+    .logo-card {
+        min-width: 140px;
+        height: 70px;
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+}
+
+/* =======================================================
+   СЕКЦІЯ КЕЙСІВ (КАРТКИ З КАРТИНКАМИ)
+   ======================================================= */
+.case-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden; /* Щоб картинка не вилазила за закруглені кути */
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12);
+    border-color: rgba(0, 71, 255, 0.2);
+}
+
+/* Блок з картинкою */
+.case-image {
+    position: relative;
+    height: 220px; /* Висота картинки */
+    overflow: hidden;
+}
+
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка заповнює блок без розтягування */
+    transition: transform 0.5s ease; /* Плавний зум при наведенні */
+}
+
+.case-card:hover .case-image img {
+    transform: scale(1.05); /* Легке наближення картинки */
+}
+
+/* Тег галузі (виробництво, дистрибуція) поверх картинки */
+.case-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--accent-blue);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    z-index: 2;
+}
+
+/* Текстова частина кейсу */
+.case-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Щоб всі картки в ряду були однакової висоти */
+}
+
+.case-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.case-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Притискає кнопку вниз */
+}
+
+/* Кнопка-посилання */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-blue);
+    font-weight: 700;
+    transition: 0.3s;
+    align-self: flex-start; /* Вирівнювання по лівому краю */
+}
+
+.btn-link:hover {
+    color: #D500F9;
+    transform: translateX(5px);
+}
