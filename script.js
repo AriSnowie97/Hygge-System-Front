@@ -46,3 +46,35 @@ function scrollCarousel(direction) {
         behavior: 'smooth' 
     });
 }
+
+// === МАГІЯ СИНХРОНІЗАЦІЇ КАРТОК І ТАБІВ НА МОБІЛЬНОМУ ===
+document.addEventListener('DOMContentLoaded', () => {
+    const cardsContainer = document.querySelector('.tabs-content-area');
+    const tabsContainer = document.querySelector('.tabs-sidebar');
+    const tabs = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('.tab-panel');
+
+    if (!cardsContainer || !tabsContainer || tabs.length === 0) return;
+
+    // Слухаємо скрол (свайп) по картках
+    cardsContainer.addEventListener('scroll', () => {
+        // Працює тільки на мобільних (до 992px)
+        if (window.innerWidth > 992) return; 
+
+        // Рахуємо, яка картка зараз по центру екрана
+        let scrollLeft = cardsContainer.scrollLeft;
+        let cardWidth = cards[0].offsetWidth + 15; // ширина картки + відступ (gap)
+        let activeIndex = Math.round(scrollLeft / cardWidth);
+
+        // Оновлюємо активну кнопку в меню
+        tabs.forEach((tab, index) => {
+            if (index === activeIndex) {
+                tab.classList.add('active');
+                // Змушуємо верхнє меню прокрутитися до активної кнопки
+                tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+    });
+});
