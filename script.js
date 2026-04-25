@@ -54,19 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab-btn');
     const cards = document.querySelectorAll('.tab-panel');
 
-    if (!cardsContainer || !tabsContainer || tabs.length === 0) return;
+    if (!cardsContainer || !tabsContainer || tabs.length === 0 || cards.length === 0) return;
 
-    // Слухаємо скрол (свайп) по картках
+    // 1. СВАЙП КАРТОК -> ОНОВЛЮЄ ТАБИ (Те, що ми вже зробили)
     cardsContainer.addEventListener('scroll', () => {
-        // Працює тільки на мобільних (до 992px)
         if (window.innerWidth > 992) return; 
 
-        // Рахуємо, яка картка зараз по центру екрана
         let scrollLeft = cardsContainer.scrollLeft;
         let cardWidth = cards[0].offsetWidth + 15; // ширина картки + відступ (gap)
         let activeIndex = Math.round(scrollLeft / cardWidth);
 
-        // Оновлюємо активну кнопку в меню
         tabs.forEach((tab, index) => {
             if (index === activeIndex) {
                 tab.classList.add('active');
@@ -75,6 +72,25 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 tab.classList.remove('active');
             }
+        });
+    });
+
+    // 2. НОВЕ: КЛІК ПО ТАБУ -> СКРОЛИТЬ КАРТКИ
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', (e) => {
+            if (window.innerWidth > 992) return; // Працює тільки на мобільному
+            
+            // Зупиняємо стандартну поведінку (якщо раптом таби перемикалися через дисплей none)
+            e.preventDefault(); 
+
+            // Вираховуємо ширину кроку
+            let cardWidth = cards[0].offsetWidth + 15; 
+            
+            // Плавно прокручуємо нижню карусель до відповідної картки
+            cardsContainer.scrollTo({
+                left: index * cardWidth,
+                behavior: 'smooth'
+            });
         });
     });
 });
