@@ -2,21 +2,19 @@
    1. ПЕРЕМІННІ (КОЛЬОРИ ТА СКЛО)
    ======================================================= */
 :root {
-    /* Фони */
     --bg-white: #ffffff;
     --bg-light-blue: #f2f7fc; 
     
-    /* Акценти (корпоративний синій -> пурпуровий) */
+    /* Наш фірмовий яскравий градієнт */
     --accent-blue: #0047FF;
     --accent-gradient: linear-gradient(135deg, #0047FF 0%, #D500F9 100%);
     
-    /* Скло (Glassmorphism) */
+    /* Наше фірмове скло */
     --glass-bg: rgba(255, 255, 255, 0.65); 
     --glass-border: rgba(255, 255, 255, 0.9);
     --glass-shadow: 0 10px 30px rgba(0, 71, 255, 0.08); 
     --blur: blur(15px);
     
-    /* Текст */
     --text-color: #1a1a1a;
     --text-muted: #555555;
 }
@@ -24,21 +22,18 @@
 /* =======================================================
    2. БАЗОВІ НАЛАШТУВАННЯ
    ======================================================= */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Inter', sans-serif; 
-}
-
-body { 
-    background: var(--bg-white); 
-    color: var(--text-color); 
-    line-height: 1.6; 
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg-white); color: var(--text-color); line-height: 1.6; }
 ul, ol, menu { list-style: none; }
 a { text-decoration: none; color: inherit; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+section { overflow-x: hidden; padding: 80px 0; }
 
 .sr-only {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -74,11 +69,8 @@ section {
    4. ТИПОГРАФІКА ТА КНОПКИ
    ======================================================= */
 h2 { 
-    display: block;
-    width: 100%;
     text-align: center; 
     font-size: 2.8rem; 
-    margin-top: 0;
     margin-bottom: 50px; 
     background: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -87,14 +79,13 @@ h2 {
     font-weight: 800;
 }
 
-/* Суворі корпоративні кнопки */
 button, .btn-primary, .btn-secondary { 
     padding: 15px 35px; 
     border-radius: 10px; 
     font-weight: 700; 
     letter-spacing: 0.5px;
     cursor: pointer; 
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
@@ -104,22 +95,14 @@ button, .btn-primary, .btn-secondary {
     border: none;
     box-shadow: 0 8px 25px rgba(0, 71, 255, 0.2);
 }
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 71, 255, 0.3);
-    color: #ffffff;
-}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 71, 255, 0.3); }
 
 .btn-secondary { 
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid var(--glass-border);
     color: var(--text-color);
 }
-
-.btn-secondary:hover { 
-    background: rgba(255, 255, 255, 0.8);
-}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.5); }
 
 /* =======================================================
    5. ШАПКА ТА НАВІГАЦІЯ (HEADER)
@@ -293,6 +276,11 @@ button, .btn-primary, .btn-secondary {
 .cta-text h2 { text-align: left; margin-bottom: 15px !important; }
 .cta-text p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
 
+/* 2. КНОПКА: Нежный пастельный градиент (и защита текста от покраски) */
+.cta-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.cta-text h2 { text-align: left; margin-bottom: 15px !important; }
+.cta-text p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
+
 .cta-form { 
     background: rgba(255, 255, 255, 0.3); backdrop-filter: var(--blur);
     border: 1px solid var(--glass-border); padding: 40px; border-radius: 24px; box-shadow: var(--glass-shadow);
@@ -302,7 +290,19 @@ fieldset { border: none; padding: 0; margin: 0; }
 .form-group label { margin-bottom: 8px; font-weight: 600; }
 .form-group input { padding: 15px; border: 1px solid var(--glass-border); background: rgba(255, 255, 255, 0.5); border-radius: 12px; font-size: 1rem; outline: none; transition: 0.3s; }
 .form-group input:focus { background: rgba(255, 255, 255, 0.8); border-color: rgba(0, 71, 255, 0.5); }
-.btn-submit { width: 100%; margin-top: 10px; }
+.btn-submit { 
+    width: 100%; 
+    margin-top: 10px; 
+    background: linear-gradient(135deg, #A8BFFF 0%, #E8B9FF 100%) !important; 
+    color: #000000 !important; 
+    -webkit-text-fill-color: #000000 !important; 
+    border: none;
+}
+
+.btn-submit:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 30px rgba(168, 191, 255, 0.6); 
+}
 .cta-form .form-note { text-align: center !important; margin-top: 15px !important; display: block !important; width: 100% !important; color: var(--text-muted); }
 
 .footer { text-align: center; padding: 30px 0; border-top: 1px solid var(--glass-border); }
@@ -791,4 +791,311 @@ fieldset { border: none; padding: 0; margin: 0; }
 .btn-link:hover {
     color: #D500F9;
     transform: translateX(5px);
+}
+
+/* === РУХОМА СТРІЧКА ЛОГОТИПІВ === */
+.marquee-wrapper { width: 100%; overflow: hidden; position: relative; }
+/* Градієнтні маски по краях, щоб логотипи плавно зникали */
+.marquee-wrapper::before, .marquee-wrapper::after {
+    content: ''; position: absolute; top: 0; width: 100px; height: 100%; z-index: 2;
+}
+.marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg-light-blue), transparent); }
+.marquee-wrapper::after { right: 0; background: linear-gradient(to left, var(--bg-light-blue), transparent); }
+
+.marquee-track {
+    display: flex; gap: 30px; width: max-content;
+    animation: scroll-left 25s linear infinite; /* Анімація руху */
+}
+.marquee-track:hover { animation-play-state: paused; /* Зупинка при наведенні */ }
+
+.logo-card { height: 80px; width: 180px; flex-shrink: 0; }
+/* Прибираємо сірий фільтр, тепер вони кольорові назавжди */
+.logo-card img { filter: none !important; opacity: 1 !important; }
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 15px)); }
+}
+
+/* === ГРАДІЄНТНИЙ ФОН ДЛЯ CTA === */
+.cta {
+    background: var(--accent-gradient) !important;
+    position: relative;
+    overflow: hidden;
+}
+/* Перефарбовуємо тексти всередині блоку на білий */
+.cta-text h2, 
+.cta-text p, 
+.cta-form label, 
+.cta-form .form-note {
+    color: #ffffff !important;
+}
+.cta-text h2 {
+    -webkit-text-fill-color: #ffffff; /* Відміняємо градієнт тексту */
+}
+/* Робимо скло форми ще більш стильним на темному фоні */
+.cta-form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+.form-group input { background: rgba(255, 255, 255, 0.9); }
+
+/* === ОНОВЛЕНИЙ ФУТЕР === */
+.footer { padding: 60px 0 20px; text-align: left; background: var(--bg-white); border-top: 1px solid var(--glass-border); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-col h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--text-color); }
+.footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { color: var(--text-muted); transition: 0.3s; }
+.footer-col a:hover { color: var(--accent-blue); padding-left: 5px; }
+.branding p { color: var(--text-muted); margin: 15px 0; max-width: 300px; }
+.socials { display: flex; gap: 15px; margin-top: 20px; }
+.socials a { width: 35px; height: 35px; background: rgba(0,71,255,0.05); color: var(--accent-blue); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s; }
+.socials a:hover { background: var(--accent-blue); color: white; transform: translateY(-3px); }
+.socials svg { width: 18px; height: 18px; }
+.contact-info li { color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-muted); }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; text-align: center; } .branding p, .contact-info li { justify-content: center; margin: 15px auto; } .socials { justify-content: center; } .footer-col a:hover { padding-left: 0; } }
+
+/* === ТАБИ РІШЕННЯ (Стиль Phrase) === */
+.tabs-layout { display: flex; gap: 60px; align-items: stretch; }
+.tabs-sidebar { flex: 0 0 85px; display: flex; flex-direction: column; gap: 10px; border-left: 2px solid rgba(0,71,255,0.1); }
+.tab-btn { background: transparent; border: none; text-align: left; padding: 20px 30px; font-size: 1.2rem; font-weight: 600; color: var(--text-muted); cursor: pointer; position: relative; transition: 0.3s; border-radius: 0 16px 16px 0; }
+.tab-btn:hover { background: rgba(0,71,255,0.02); color: var(--text-color); }
+/* Активна кнопка */
+.tab-btn.active { color: var(--accent-blue); background: var(--bg-white); box-shadow: 10px 10px 30px rgba(0,71,255,0.05); }
+.tab-btn.active::before { content: ''; position: absolute; left: -2px; top: 0; bottom: 0; width: 4px; background: var(--accent-gradient); border-radius: 4px; }
+
+.tabs-content-area { flex: 1; background: var(--bg-white); border-radius: 24px; padding: 50px; box-shadow: var(--glass-shadow); border: 1px solid var(--glass-border); position: relative; overflow: hidden; }
+.tab-panel { display: none; animation: fadeIn 0.5s ease; }
+.tab-panel.active { display: block; }
+
+.tab-image-placeholder { width: 100%; height: 250px; background: var(--bg-light-blue); border-radius: 16px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; }
+.tab-image-placeholder svg { width: 80px; height: 80px; color: var(--accent-blue); opacity: 0.5; }
+.tab-panel h3 { font-size: 2rem; margin-bottom: 15px; color: var(--text-color); }
+.tab-panel p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 992px) {
+    .tabs-layout { flex-direction: column; gap: 30px; }
+    .tabs-sidebar { border-left: none; border-bottom: 2px solid rgba(0,71,255,0.1); flex-direction: row; overflow-x: auto; padding-bottom: 10px; }
+    .tab-btn { white-space: nowrap; border-radius: 16px 16px 0 0; }
+    .tab-btn.active::before { left: 0; right: 0; top: auto; bottom: -2px; height: 4px; width: auto; }
+    .tabs-content-area { padding: 30px 20px; }
+}
+
+/* === ЩО ТАКЕ SAP (Стиль 4 блоки) === */
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+.about-card { background: var(--bg-light-blue); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,71,255,0.05); transition: 0.3s; }
+.about-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.about-card p { color: var(--text-muted); font-size: 0.95rem; }
+.about-card:hover { transform: translateY(-5px); background: #ffffff; box-shadow: var(--glass-shadow); border-color: rgba(0,71,255,0.1); }
+
+/* =======================================================
+   КАРУСЕЛЬ СИСТЕМ (АНАЛОГИ)
+   ======================================================= */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 20px 10px;
+    scrollbar-width: none; /* Ховаємо скроллбар у Firefox */
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Ховаємо скроллбар у Chrome/Safari */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* На телефоні 1 слайд на весь екран */
+    scroll-snap-align: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 calc(50% - 15px); /* На ПК показуємо рівно 2 слайди поруч */
+    }
+}
+
+.carousel-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 71, 255, 0.1);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top; /* Щоб було видно менюшки систем зверху */
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.slide-caption {
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Кнопки перемикання */
+.carousel-btn {
+    background: var(--bg-white);
+    border: 1px solid var(--glass-border);
+    color: var(--accent-blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(0, 71, 255, 0.2);
+}
+
+.carousel-btn.prev { left: -25px; }
+.carousel-btn.next { right: -25px; }
+
+/* Адаптив для кнопок на планшетах */
+@media (max-width: 1100px) {
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+}
+
+.what-is-sap {
+    /* Легкий пастельний градієнт на фон секції */
+    background: linear-gradient(135deg, rgba(235, 242, 255, 0.8) 0%, rgba(246, 235, 255, 0.8) 100%) !important;
+    backdrop-filter: var(--blur);
+}
+
+.what-is-sap h2 {
+    /* Суворий темний заголовок (БЕЗ градієнта) */
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--text-color) !important;
+}
+.about-card { 
+    background: var(--glass-bg); 
+    backdrop-filter: var(--blur); 
+    border: 1px solid var(--glass-border); 
+    box-shadow: var(--glass-shadow); 
+    padding: 30px; 
+    border-radius: 20px; 
+    transition: 0.3s; 
+}
+
+.about-card:hover { 
+    transform: translateY(-5px); 
+    background: #ffffff; 
+    box-shadow: 0 15px 30px rgba(0, 71, 255, 0.1); 
+}
+
+/* 3. ФІКС "ЗАСІЧКИ" НА ТАБЛИЦІ (Скріншот 4) */
+.compare-table {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+
+/* Примусово заокруглюємо самі комірки в нижньому ряду, щоб вони не стирчали */
+.compare-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+.compare-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+/* =======================================================
+   ФІНАЛЬНИЙ АДАПТИВ ТАБІВ ДЛЯ МОБІЛКИ (Без величезних дірок)
+   ======================================================= */
+@media (max-width: 992px) {
+    /* 1. Зменшуємо прірву зверху під заголовком */
+    .solution hgroup { margin-bottom: 20px !important; }
+
+    /* 2. Зменшуємо загальну відстань між кнопками та контентом */
+    .tabs-layout { flex-direction: column !important; gap: 15px !important; position: relative !important; }
+
+    /* 3. Налаштовуємо контейнер кнопок (прибираємо відступи знизу) */
+    .tabs-sidebar {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+        border-left: none !important;
+        border-bottom: 2px solid rgba(0,71,255,0.1) !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    .tabs-sidebar::-webkit-scrollbar { display: none !important; }
+
+    /* 4. ЖОРСТКО СТИСКАЄМО КНОПКУ: вбиваємо старий padding 15px */
+    .tab-btn {
+        white-space: nowrap !important;
+        border-radius: 0 !important;
+        padding: 8px 15px !important; /* Ідеальний розмір по висоті */
+        border-bottom: none !important; /* Відключаємо стару лінію */
+        font-size: 1.05rem !important;
+        position: relative !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    /* 5. Відключаємо всі старі ефекти активної кнопки */
+    .tab-btn::before { display: none !important; content: none !important; }
+    .tab-btn.active {
+        background: transparent !important;
+        border-bottom: none !important;
+        box-shadow: none !important;
+        color: var(--accent-blue) !important;
+
+    }
+
+    /* 6. Малюємо коротку, акуратну лінію рівно під текстом */
+    .tab-btn.active::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: -2px !important;
+        left: 15px !important; /* Відступ зліва як у тексту */
+        right: 15px !important; /* Відступ справа як у тексту */
+        height: 3px !important;
+        background: var(--accent-blue) !important;
+        border-radius: 3px 3px 0 0 !important;
+    }
+
+    /* 7. Анімована стрілочка-підказка для свайпу праворуч */
+    .tabs-layout::before {
+        content: '' !important; position: absolute !important; right: -20px !important; top: 0 !important; width: 60px !important; height: 100px !important;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230047FF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7'/%3E%3C/svg%3E") no-repeat right 20px center / 18px, linear-gradient(to left, var(--bg-white) 40%, transparent) !important;
+        pointer-events: none !important; z-index: 5 !important; animation: swipe-pulse 2s infinite !important;
+    }
+    @keyframes swipe-pulse { 0%, 100% { transform: translateX(0); opacity: 0.6; } 50% { transform: translateX(5px); opacity: 1; } }
 }

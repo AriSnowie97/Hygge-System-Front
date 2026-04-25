@@ -21,3 +21,28 @@ if (burgerBtn && navContainer) {
         });
     });
 }
+
+// Скрипт для табів "Рішення"
+function switchTab(tabId, btn) {
+    // Знімаємо клас active з усіх кнопок
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    // Знімаємо клас active з усіх панелей
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    
+    // Додаємо active натиснутій кнопці та відповідній панелі
+    btn.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+// Скрипт для прокрутки каруселі систем
+function scrollCarousel(direction) {
+    const track = document.getElementById('systems-track');
+    // Отримуємо ширину одного слайду + відступ (gap 30px)
+    const slideWidth = track.querySelector('.carousel-slide').clientWidth + 30;
+    
+    // Прокручуємо
+    track.scrollBy({ 
+        left: slideWidth * direction, 
+        behavior: 'smooth' 
+    });
+}
