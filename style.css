@@ -337,122 +337,57 @@ fieldset { border: none; padding: 0; margin: 0; }
 }
 
 /* =======================================================
-   ЗИГЗАГ ДЛЯ ПК ТА ГІБРИДНІ КАРТКИ ДЛЯ МОБІЛЬНИХ
+   ЗИГЗАГ ДЛЯ ПК ТА ГІБРИДНІ КАРТКИ ДЛЯ МОБІЛЬНИХ (ВИПРАВЛЕНО)
    ======================================================= */
-.zigzag-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-top: 20px;
-}
+.zigzag-wrapper { display: flex; flex-direction: column; gap: 60px; margin-top: 20px; }
+.zigzag-row { display: flex; align-items: center; gap: 60px; }
+.zigzag-row.reverse { flex-direction: row-reverse; }
+.zigzag-image, .zigzag-text { flex: 1; }
 
-.zigzag-row {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-
-.zigzag-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.zigzag-image, .zigzag-text {
-    flex: 1;
-}
-
-/* Велика плашка на ПК */
 .placeholder-box {
-    background: var(--glass-bg);
-    backdrop-filter: var(--blur);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    border-radius: 24px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease;
-    overflow: hidden;
+    background: var(--glass-bg); backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+    border-radius: 24px; height: 300px; display: flex; align-items: center;
+    justify-content: center; transition: transform 0.4s ease; overflow: hidden;
+}
+.zigzag-row:hover .placeholder-box { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12); }
+.placeholder-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.zigzag-text h3 { font-size: 2rem; margin-bottom: 15px; color: var(--text-color); }
+.zigzag-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; }
+
+/* Повертаємо зниклу кнопку "Детальніше" */
+.zigzag-btn {
+    display: inline-block; padding: 12px 30px; background: transparent;
+    border: 2px solid var(--accent-blue); color: var(--accent-blue);
+    border-radius: 10px; font-weight: 700; transition: all 0.3s ease;
+}
+.zigzag-btn:hover {
+    background: var(--accent-blue); color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 71, 255, 0.2); transform: translateY(-3px);
 }
 
-
-.zigzag-row:hover .placeholder-box {
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12);
-}
-
-.placeholder-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.zigzag-text h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.zigzag-text p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-}
-
-/* === МАГІЯ ДЛЯ МОБІЛОК: ПЕРЕТВОРЮЄМО ЗИГЗАГ НА КАРТКИ === */
+/* ОДИН ПРАВИЛЬНИЙ АДАПТИВ ДЛЯ МОБІЛЬНИХ */
 @media (max-width: 992px) {
-    .zigzag-wrapper {
-        gap: 30px; /* Відстань між картками */
-    }
+    .zigzag-wrapper { gap: 30px; }
     
     .zigzag-row, .zigzag-row.reverse {
-        flex-direction: column; /* Текст під картинкою */
-        background: var(--glass-bg); /* Даємо фон всій послузі, як у картки */
-        border: 1px solid var(--glass-border);
-        border-radius: 24px;
-        padding: 30px 20px;
-        gap: 15px;
-        text-align: center;
-        box-shadow: var(--glass-shadow);
-    }
-
-    /* Ховаємо величезний порожній квадрат */
-    .placeholder-box {
-        height: auto; 
-        background: transparent; 
-        border: none;
-        box-shadow: none;
-        backdrop-filter: none;
-    }
-
-    /* Робимо іконку в стилі маленьких квадратиків (як у секції "Проблеми") */
-    .placeholder-box svg {
-        width: 32px;
-        height: 32px;
-        background: rgba(0, 71, 255, 0.05);
-        padding: 15px;
-        border-radius: 14px;
-        border: 1px solid rgba(0, 71, 255, 0.1);
-        box-sizing: content-box;
-    }
-
-    .zigzag-text h3 {
-        font-size: 1.5rem;
-    }
-}
-/* Адаптив для телефонів та планшетів */
-@media (max-width: 992px) {
-    .zigzag-row, 
-    .zigzag-row.reverse {
-        flex-direction: column; /* Ставимо одне під одним */
-        text-align: center;
-        gap: 30px;
+        flex-direction: column; align-items: center; text-align: center;
+        background: var(--glass-bg); border: 1px solid var(--glass-border);
+        border-radius: 24px; padding: 30px 20px; gap: 20px; box-shadow: var(--glass-shadow);
     }
     
+    .zigzag-image { width: 100%; display: flex; justify-content: center; }
+    
     .placeholder-box {
-        height: 250px;
-        width: 100%;
+        height: 200px; width: 100%; border-radius: 16px;
+        background: transparent; border: none; box-shadow: none; margin: 0;
     }
+    
+    .zigzag-text { display: flex; flex-direction: column; align-items: center; padding: 0; }
+    .zigzag-text h3 { font-size: 1.6rem; margin-bottom: 15px; }
+    .zigzag-text p { margin-bottom: 25px; }
+    .zigzag-btn { margin: 0 auto; }
 }
 
 /* =======================================================
