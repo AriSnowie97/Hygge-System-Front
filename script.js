@@ -34,19 +34,6 @@ function switchTab(tabId, btn) {
     document.getElementById(tabId).classList.add('active');
 }
 
-// Скрипт для прокрутки каруселі систем
-function scrollCarousel(direction) {
-    const track = document.getElementById('systems-track');
-    // Отримуємо ширину одного слайду + відступ (gap 30px)
-    const slideWidth = track.querySelector('.carousel-slide').clientWidth + 30;
-    
-    // Прокручуємо
-    track.scrollBy({ 
-        left: slideWidth * direction, 
-        behavior: 'smooth' 
-    });
-}
-
 // === МАГІЯ СИНХРОНІЗАЦІЇ КАРТОК І ТАБІВ НА МОБІЛЬНОМУ ===
 document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.tabs-content-area');

@@ -345,10 +345,17 @@ fieldset { border: none; padding: 0; margin: 0; }
 .zigzag-image, .zigzag-text { flex: 1; }
 
 .placeholder-box {
-    background: var(--glass-bg); backdrop-filter: var(--blur);
-    border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
-    border-radius: 24px; height: 300px; display: flex; align-items: center;
-    justify-content: center; transition: transform 0.4s ease; overflow: hidden;
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 24px;
+    height: 420px; /* <--- Ідеальна висота для таких блоків */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+    overflow: hidden;
 }
 .zigzag-row:hover .placeholder-box { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0, 71, 255, 0.12); }
 .placeholder-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -837,7 +844,7 @@ fieldset { border: none; padding: 0; margin: 0; }
 .tab-panel { display: none; animation: fadeIn 0.5s ease; }
 .tab-panel.active { display: block; }
 
-.tab-image-placeholder { width: 100%; height: 300px; background: var(--bg-light-blue); border-radius: 16px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.tab-image-placeholder { width: 100%; height: 450px; background: var(--bg-light-blue); border-radius: 16px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .tab-image-placeholder img { width: 100%; height: 100%; object-fit: cover; }
 .tab-panel h3 { font-size: 2rem; margin-bottom: 15px; color: var(--text-color); }
 .tab-panel p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
