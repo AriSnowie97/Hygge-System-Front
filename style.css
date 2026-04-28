@@ -1351,3 +1351,73 @@ fieldset { border: none; padding: 0; margin: 0; }
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+/* =======================================================
+   ВАРИАЦИИ ПЛАШЕК ДЛЯ РАЗНЫХ СТРАНИЦ
+   ======================================================= */
+
+/* --- БЛОГ: Горизонтальні картки-статті (КОМПАКТНІ) --- */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px; /* Обмежуємо ширину, щоб картки не були на весь екран */
+    margin: 0 auto;   /* Ставимо цей блок рівно по центру */
+}
+
+.blog-card {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.blog-card .card-image {
+    width: 35%; /* Віддаємо під картинку трохи менше місця */
+    height: auto;
+    min-height: 200px; /* Робимо картинку нижчою (було 250px) */
+}
+
+.blog-card .card-body {
+    width: 65%; /* Тексту залишаємо більше місця */
+    justify-content: center;
+    padding: 30px 40px; /* Робимо акуратні внутрішні відступи */
+}
+
+/* Трохи зменшуємо заголовок саме для блогу, щоб він не кричав */
+.blog-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* --- АКЦИИ: Крупные карточки (по 2 в ряд) --- */
+.promo-grid {
+    display: grid;
+    /* Делаем карточки шире, чтобы влезало только 2 в ряд */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.promo-card {
+    border-radius: 32px; /* Чуть более круглые и мягкие */
+}
+
+.promo-card .card-image {
+    height: 300px; /* Картинка больше и заметнее */
+}
+
+.promo-card .card-body {
+    padding: 40px; /* Больше "воздуха" внутри */
+}
+
+/* --- Адаптив для новых плашек на мобильных --- */
+@media (max-width: 768px) {
+    .blog-card {
+        flex-direction: column; /* На телефоне снова делаем вертикальными */
+    }
+    .blog-card .card-image, 
+    .blog-card .card-body {
+        width: 100%;
+    }
+    .promo-grid {
+        grid-template-columns: 1fr; /* На телефоне 1 в ряд */
+    }
+}
