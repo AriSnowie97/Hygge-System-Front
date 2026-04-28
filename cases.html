@@ -48,32 +48,102 @@
         </div>
     </section>
 
-    <section class="page-content">
+    <section class="page-content" style="padding-top: 0;">
         <div class="container">
+            
             <div class="page-filters">
-                <button class="filter-btn active">Всі</button>
-                <button class="filter-btn">Виробництво</button>
-                <button class="filter-btn">Дистрибуція</button>
-                <button class="filter-btn">Рітейл</button>
+                <button class="filter-btn active" data-filter="all">Всі кейси</button>
+                <button class="filter-btn" data-filter="production">Виробництво</button>
+                <button class="filter-btn" data-filter="distribution">Дистрибуція</button>
+                <button class="filter-btn" data-filter="retail">Рітейл</button>
             </div>
 
             <div class="cards-grid">
-                <article class="item-card">
+                
+                <article class="item-card" data-category="production">
                     <div class="card-image">
                         <span class="card-tag">Виробництво</span>
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Project">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Завод">
                     </div>
                     <div class="card-body">
                         <h3>Автоматизація заводу металоконструкцій</h3>
-                        <p>Повний перехід з 1С за 4 місяці та налаштування складського обліку.</p>
-                        <a href="#" class="btn-link">Докладніше →</a>
+                        <p>Зменшили час на обробку замовлень на 40% та налагодили точний облік залишків на складах.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
                     </div>
                 </article>
-                </div>
+
+                <article class="item-card" data-category="retail">
+                    <div class="card-image">
+                        <span class="card-tag">Рітейл</span>
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Магазин">
+                    </div>
+                    <div class="card-body">
+                        <h3>Об'єднання 50+ магазинів в єдину мережу</h3>
+                        <p>Безшовна інтеграція касових апаратів з центральною базою SAP. Аналітика продажів у реальному часі.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
+                    </div>
+                </article>
+
+                <article class="item-card" data-category="distribution">
+                    <div class="card-image">
+                        <span class="card-tag">Дистрибуція</span>
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Склад">
+                    </div>
+                    <div class="card-body">
+                        <h3>Оптимізація логістики для імпортера</h3>
+                        <p>Впровадження модуля WMS для складу. Швидкість збірки замовлень зросла вдвічі.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
+                    </div>
+                </article>
+
+                <article class="item-card" data-category="production">
+                    <div class="card-image">
+                        <span class="card-tag">Виробництво</span>
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Цех">
+                    </div>
+                    <div class="card-body">
+                        <h3>Впровадження SAP на меблевій фабриці</h3>
+                        <p>Повна прозорість собівартості продукції та усунення касових розривів.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
+                    </div>
+                </article>
+
+                <article class="item-card" data-category="distribution">
+                    <div class="card-image">
+                        <span class="card-tag">Дистрибуція</span>
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80" alt="Логістика">
+                    </div>
+                    <div class="card-body">
+                        <h3>Контроль автопарку на 200+ машин</h3>
+                        <p>Інтеграція GPS-трекінгу з ERP-системою для автоматичного списання пального.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
+                    </div>
+                </article>
+                
+                <article class="item-card" data-category="retail">
+                    <div class="card-image">
+                        <span class="card-tag">Рітейл</span>
+                        <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80" alt="Магазин одягу">
+                    </div>
+                    <div class="card-body">
+                        <h3>Автоматизація мережі бутиків</h3>
+                        <p>Налаштування програми лояльності та єдиної бази клієнтів (CRM) в SAP.</p>
+                        <a href="#" class="btn-link">Читати кейс →</a>
+                    </div>
+                </article>
+
+            </div>
 
             <div class="pagination">
-                <button class="btn-secondary">Показати ще</button>
+                <button class="page-btn prev" disabled>←</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">12</button>
+                <button class="page-btn next">→</button>
             </div>
+
         </div>
     </section>
 

@@ -1290,3 +1290,56 @@ fieldset { border: none; padding: 0; margin: 0; }
     .card-body p { margin-bottom: 20px; flex-grow: 0; }
     .btn-link { align-self: center !important; }
 }
+
+/* =======================================================
+   ПОЛНОЦЕННАЯ ПАГИНАЦИЯ (НОМЕРА СТРАНИЦ)
+   ======================================================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.page-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(0, 71, 255, 0.1);
+    color: var(--accent-blue);
+    border-color: rgba(0, 71, 255, 0.2);
+}
+
+.page-btn.active {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.2);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+.page-dots {
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
