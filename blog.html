@@ -43,34 +43,66 @@
 
     <section class="inner-hero">
         <div class="container">
-            <h1>Блог Hygge System</h1>
-            <p>Корисні статті про автоматизацію, ERP та розвиток бізнесу.</p>
+            <h1>Наш Блог</h1>
+            <p>Ділимося експертними статтями про ERP, автоматизацію та розвиток бізнесу в Україні.</p>
         </div>
     </section>
 
-    <section class="page-content">
-    <div class="container">
-        <div class="page-filters">
-            <button class="filter-btn active">Всі статті</button>
-            <button class="filter-btn">Новини SAP</button>
-            <button class="filter-btn">Поради</button>
-        </div>
+    <section class="page-content" style="padding-top: 0;">
+        <div class="container">
+            <div class="page-filters">
+                <button class="filter-btn active" data-filter="all">Всі статті</button>
+                <button class="filter-btn" data-filter="erp">Все про ERP</button>
+                <button class="filter-btn" data-filter="news">Новини SAP</button>
+                <button class="filter-btn" data-filter="tips">Поради бізнесу</button>
+            </div>
 
-        <div class="cards-grid">
-            <article class="item-card">
-                <div class="card-image">
-                    <img src="https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-20488.jpg" alt="Blog Post">
-                </div>
-                <div class="card-body">
-                    <div class="card-meta">📅 28 Квітня, 2026</div>
-                    <h3>Чому бізнес обирає SAP замість 1С у 2026 році?</h3>
-                    <p>Розбираємо головні переваги переходу на міжнародні стандарти обліку.</p>
-                    <a href="#" class="btn-link">Читати статтю →</a>
-                </div>
-            </article>
+            <div class="blog-grid">
+                <article class="item-card" data-category="erp">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="ERP">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">📅 25 Квітня, 2026</div>
+                        <h3>Як ERP-система збільшує прибуток виробництва?</h3>
+                        <p>Розбираємо реальні цифри: від скорочення залишків на складі до автоматизації зарплат.</p>
+                        <a href="#" class="btn-link">Читати статтю →</a>
+                    </div>
+                </article>
+
+                <article class="item-card" data-category="news">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=800&q=80" alt="SAP News">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">📅 20 Квітня, 2026</div>
+                        <h3>Оновлення SAP Business One: що нового у версії 10.0?</h3>
+                        <p>Новий Web-клієнт, покращена аналітика та ще більше можливостей для хмарного використання.</p>
+                        <a href="#" class="btn-link">Читати статтю →</a>
+                    </div>
+                </article>
+
+                <article class="item-card" data-category="tips">
+                    <div class="card-image">
+                        <img src="https://t4.ftcdn.net/jpg/02/50/55/65/360_F_250556569_HJo4Hu8FILhgWkPPKLKnHfC7F2UR9gZH.jpg" alt="Tips">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">📅 15 Квітня, 2026</div>
+                        <h3>5 помилок при впровадженні автоматизації</h3>
+                        <p>Чому деякі проекти зупиняються на півдорозі та як цього уникнути вашій компанії.</p>
+                        <a href="#" class="btn-link">Читати статтю →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn prev" disabled>←</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn next">→</button>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 <footer class="footer">
@@ -92,7 +124,7 @@
                     <li><a href="#solution">Можливості SAP</a></li>
                     <li><a href="#services">Послуги</a></li>
                     <li><a href="#process">Етапи роботи</a></li>
-                    <li><a href="#cases">Кейси</a></li>
+                    <li><a href="cases.html">Кейси</a></li>
                 </ul>
             </div>
             

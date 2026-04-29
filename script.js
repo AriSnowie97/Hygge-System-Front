@@ -81,3 +81,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // === ЛОГИКА ФИЛЬТРОВ ДЛЯ СТРАНИЦ (Кейсы, Блог) ===
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.item-card');
+
+    if (filterBtns.length > 0 && cards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Убираем активный класс со всех кнопок и вешаем на нажатую
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Получаем категорию, которую нужно показать
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Перебираем все карточки
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    // Показываем, если категория совпадает или если выбрано "Всі"
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.style.display = 'flex'; // Карточка использует flex
+                        // Добавляем микро-анимацию появления
+                        card.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none'; // Прячем лишние
+                    }
+                });
+            });
+        });
+    }
+});

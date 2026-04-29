@@ -28,9 +28,9 @@ ul, ol, menu { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
     width: 100%;
 }
 section { overflow-x: hidden; padding: 80px 0; }
@@ -43,7 +43,7 @@ section { overflow-x: hidden; padding: 80px 0; }
 .container {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
     width: 100%;
 }
 
@@ -334,6 +334,14 @@ fieldset { border: none; padding: 0; margin: 0; }
     .btn-primary, .btn-secondary { width: 100%; }
     h2 { font-size: 2.2rem; margin-bottom: 30px; }
     section { padding: 60px 0; }
+    /* Повертаємо безпечні бокові відступи для планшетів та телефонів */
+    .container {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important; /* Щоб нічого не вилазило за екран і не створювало горизонтальний скрол */
+    }
 }
 
 /* =======================================================
@@ -1289,4 +1297,127 @@ fieldset { border: none; padding: 0; margin: 0; }
     .card-body h3 { font-size: 1.3rem; }
     .card-body p { margin-bottom: 20px; flex-grow: 0; }
     .btn-link { align-self: center !important; }
+}
+
+/* =======================================================
+   ПОЛНОЦЕННАЯ ПАГИНАЦИЯ (НОМЕРА СТРАНИЦ)
+   ======================================================= */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.page-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(0, 71, 255, 0.1);
+    color: var(--accent-blue);
+    border-color: rgba(0, 71, 255, 0.2);
+}
+
+.page-btn.active {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.2);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+.page-dots {
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* =======================================================
+   ВАРИАЦИИ ПЛАШЕК ДЛЯ РАЗНЫХ СТРАНИЦ
+   ======================================================= */
+
+/* --- БЛОГ: Горизонтальні картки-статті (КОМПАКТНІ) --- */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px; /* Обмежуємо ширину, щоб картки не були на весь екран */
+    margin: 0 auto;   /* Ставимо цей блок рівно по центру */
+}
+
+.blog-card {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.blog-card .card-image {
+    width: 35%; /* Віддаємо під картинку трохи менше місця */
+    height: auto;
+    min-height: 200px; /* Робимо картинку нижчою (було 250px) */
+}
+
+.blog-card .card-body {
+    width: 65%; /* Тексту залишаємо більше місця */
+    justify-content: center;
+    padding: 30px 40px; /* Робимо акуратні внутрішні відступи */
+}
+
+/* Трохи зменшуємо заголовок саме для блогу, щоб він не кричав */
+.blog-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* --- АКЦИИ: Крупные карточки (по 2 в ряд) --- */
+.promo-grid {
+    display: grid;
+    /* Делаем карточки шире, чтобы влезало только 2 в ряд */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.promo-card {
+    border-radius: 32px; /* Чуть более круглые и мягкие */
+}
+
+.promo-card .card-image {
+    height: 300px; /* Картинка больше и заметнее */
+}
+
+.promo-card .card-body {
+    padding: 40px; /* Больше "воздуха" внутри */
+}
+
+/* --- Адаптив для новых плашек на мобильных --- */
+@media (max-width: 768px) {
+    .blog-card {
+        flex-direction: column; /* На телефоне снова делаем вертикальными */
+    }
+    .blog-card .card-image, 
+    .blog-card .card-body {
+        width: 100%;
+    }
+    .promo-grid {
+        grid-template-columns: 1fr; /* На телефоне 1 в ряд */
+    }
 }
