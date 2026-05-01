@@ -1508,50 +1508,88 @@ fieldset { border: none; padding: 0; margin: 0; }
 }
 
 /* =======================================================
-   СТИЛІ ДЛЯ СТОРІНКИ SAP BUSINESS ONE
+   SAP BUSINESS ONE PAGE STYLES
    ======================================================= */
-.sap-intro {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
 
-.sap-text {
-    flex: 1;
+/* Hero стилізація */
+.sap-hero {
+    padding: 180px 0 100px;
 }
-
-.sap-text h2 {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.sap-text p {
-    font-size: 1.15rem;
-    line-height: 1.7;
+.sap-hero .badge {
+    background: rgba(0, 71, 255, 0.1);
+    color: var(--accent-blue);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
     margin-bottom: 20px;
-    color: var(--text-muted);
 }
 
-.feature-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
+/* Вступна секція */
+.sap-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.intro-text h2 { text-align: left; margin-bottom: 25px; }
+.intro-text p { font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; }
+
+.intro-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.stat-card {
+    padding: 40px 20px;
+    text-align: center;
+}
+.stat-card h3 { font-size: 3rem; color: var(--accent-blue); margin-bottom: 10px; }
+.stat-card p { font-weight: 600; font-size: 0.9rem; }
+
+/* Модулі */
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.module-icon { font-size: 2.5rem; margin-bottom: 20px; }
+.module-card h3 { font-size: 1.25rem; margin-bottom: 15px; }
+
+/* Технологічний блок */
+.sap-tech-block { padding: 100px 0; background: rgba(0, 71, 255, 0.02); }
+.tech-layout { display: flex; align-items: center; gap: 80px; }
+.tech-image { flex: 1; position: relative; }
+.tech-image img { width: 100%; border-radius: 24px; box-shadow: var(--glass-shadow); }
+.hana-badge {
+    position: absolute;
+    top: -20px; right: -20px;
+    background: #000; color: #fff;
+    padding: 10px 20px; border-radius: 12px;
+    font-weight: 800; font-size: 0.8rem;
+}
+.tech-content { flex: 1; }
+.check-list { list-style: none; padding: 0; margin-top: 30px; }
+.check-list li { 
+    margin-bottom: 20px; font-size: 1.1rem; padding-left: 30px; position: relative; 
+}
+.check-list li::before {
+    content: "✓"; position: absolute; left: 0; color: var(--accent-blue); font-weight: 900;
 }
 
-.feature-list li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: var(--text-color);
+/* Таблиця порівняння */
+.sap-comparison h2 { margin-bottom: 50px; text-align: center; }
+.table-container { overflow-x: auto; padding: 20px; border-radius: 24px; }
+.comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.comparison-table th, .comparison-table td {
+    padding: 20px; text-align: left; border-bottom: 1px solid var(--glass-border);
 }
+.comparison-table th { font-weight: 800; color: var(--text-color); }
+.comparison-table .highlight { background: rgba(0, 71, 255, 0.03); color: var(--accent-blue); font-weight: 700; }
 
-.sap-image {
-    flex: 1;
-}
-
-/* Адаптив для новых блоков */
+/* Адаптив */
 @media (max-width: 992px) {
-    .article-body { padding: 30px 20px; }
-    .article-cover { height: 250px; }
-    .sap-intro { flex-direction: column; }
+    .sap-intro-grid, .tech-layout { grid-template-columns: 1fr; flex-direction: column; gap: 40px; }
+    .stat-card h3 { font-size: 2.2rem; }
 }

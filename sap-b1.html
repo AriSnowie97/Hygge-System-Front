@@ -41,57 +41,161 @@
         </nav>
     </header>
 
-    <section class="inner-hero">
+    <section class="inner-hero sap-hero">
         <div class="container">
-            <h1>SAP Business One</h1>
-            <p>Єдина міжнародна ERP-система для розумного управління вашим бізнесом. Забудьте про хаос в обліку та зоопарк програм.</p>
-            <a href="#consultation" class="btn-primary" style="margin-top: 30px; display: inline-block;">Замовити демонстрацію</a>
+            <span class="badge">Міжнародний стандарт ERP</span>
+            <h1>SAP Business One: Інтелектуальне управління вашим бізнесом</h1>
+            <p>Єдина екосистема для масштабування компанії, яка об'єднує фінанси, продажі, склад та виробництво в одному вікні. Рішення, якому довіряють понад 75,000 компаній у світі.</p>
+            <div class="hero-btns">
+                <a href="#consultation" class="btn-primary">Замовити демо-презентацію</a>
+                <a href="#modules" class="btn-secondary">Вивчити модулі</a>
+            </div>
         </div>
     </section>
 
-    <section class="page-content" style="padding-top: 0;">
+    <section class="sap-intro-section">
         <div class="container">
-            
-            <div class="sap-intro">
-                <div class="sap-text">
-                    <h2>Що це за система?</h2>
-                    <p><strong>SAP Business One</strong> — це доступне та комплексне рішення для управління бізнесом, розроблене спеціально для малих та середніх підприємств.</p>
-                    <p>На відміну від локальних систем (таких як 1С або BAS), які потребують постійних доопрацювань та інтеграцій між собою, SAP B1 об'єднує фінанси, продажі, клієнтів (CRM), запаси та виробництво в <strong>одній єдиній базі даних</strong>.</p>
-                    <ul class="feature-list">
-                        <li>✅ Обробка даних in-memory (SAP HANA)</li>
-                        <li>✅ Вбудована міжнародна звітність (IFRS)</li>
-                        <li>✅ Доступ з будь-якої точки світу (Web-клієнт Fiori)</li>
+            <div class="sap-intro-grid">
+                <div class="intro-text">
+                    <h2>Більше ніж просто облік</h2>
+                    <p><strong>SAP Business One</strong> — це не окрема бухгалтерська програма, а комплексне рішення для управління підприємством (ERP). Вона розроблена спеціально для середнього та малого бізнесу, який прагне працювати за світовими стандартами.</p>
+                    <p>На відміну від локального софту, SAP B1 побудована на принципі <strong>єдиного джерела істини</strong>. Це означає, що дані, введені у відділі продажу, миттєво відображаються у фінансовому звіті та плані закупівель на складі без будь-яких ручних переносів чи синхронізацій.</p>
+                </div>
+                <div class="intro-stats">
+                    <div class="stat-card glass-card">
+                        <h3>170+</h3>
+                        <p>країн підтримують SAP B1</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3>50+</h3>
+                        <p>локалізацій (включаючи Україну)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modules" class="sap-modules">
+        <div class="container">
+            <h2 class="section-title">Функціональні можливості системи</h2>
+            <div class="modules-grid">
+                
+                <div class="module-card item-card">
+                    <div class="card-body">
+                        <div class="module-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Фінанси та бухгалтерський облік</h3>
+                        <p>Автоматизація всіх основних бухгалтерських операцій: від плану рахунків та проводок до багатовалютної звітності та податкового обліку. Повний контроль грошових потоків у реальному часі.</p>
+                    </div>
+                </div>
+
+                <div class="module-card item-card">
+                    <div class="card-body">
+                        <div class="module-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Продажі та CRM</h3>
+                        <p>Керуйте всім життєвим циклом клієнта. Відстежуйте потенційні угоди (Opportunities), історію комунікацій, сервісне обслуговування та аналітику продажів у розрізі менеджерів.</p>
+                    </div>
+                </div>
+
+                <div class="module-card item-card">
+                    <div class="card-body">
+                        <div class="module-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Запаси та Дистрибуція</h3>
+                        <p>Точний облік складських залишків, керування декількома складами, облік за серійними номерами та партіями. Оптимізація закупівель на основі прогнозів споживання.</p>
+                    </div>
+                </div>
+
+                <div class="module-card item-card">
+                    <div class="card-body">
+                        <div class="module-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="6" y="2" width="12" height="8" rx="2" ry="2"></rect>
+                                <line x1="12" y1="10" x2="12" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3>Виробництво та MRP</h3>
+                        <p>Планування потреби в матеріалах (MRP), створення специфікацій (BOM), керування замовленнями на виробництво та розрахунок точної собівартості готової продукції.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sap-tech-block">
+        <div class="container">
+            <div class="tech-layout">
+                <div class="tech-image">
+                    <div class="hana-badge">Powered by SAP HANA</div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SAP HANA Analytics">
+                </div>
+                <div class="tech-content">
+                    <h2>Швидкість SAP HANA та Аналітика</h2>
+                    <p>Завдяки технології обробки даних у пам'яті (In-Memory), ви отримуєте звіти за мілісекунди, навіть якщо у вас мільйони записів.</p>
+                    <ul class="check-list">
+                        <li><strong>Інтерактивні дашборди:</strong> бачте ключові показники (KPI) на головному екрані.</li>
+                        <li><strong>Прогнозний аналіз:</strong> система підкаже, коли товар закінчиться на складі.</li>
+                        <li><strong>Мобільність:</strong> працюйте через Web-клієнт або мобільний додаток з будь-якої точки світу.</li>
                     </ul>
                 </div>
-                <div class="sap-image">
-                    <div class="glass-mockup">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SAP Interface">
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
 
-            <h2 style="margin-top: 100px;">Чому обирають SAP Business One?</h2>
-            <div class="cards-grid">
-                <article class="item-card">
-                    <div class="card-body">
-                        <h3>Міжнародний стандарт</h3>
-                        <p>Найкращі світові практики управління бізнесом, які повністю адаптовані під законодавство України.</p>
-                    </div>
-                </article>
-                <article class="item-card">
-                    <div class="card-body">
-                        <h3>Масштабованість</h3>
-                        <p>Система зростає разом з вашим бізнесом. Вам не доведеться повністю переробляти ядро при збільшенні обсягів.</p>
-                    </div>
-                </article>
-                <article class="item-card">
-                    <div class="card-body">
-                        <h3>Прозорість 24/7</h3>
-                        <p>Відсутність дублювання даних. Ви завжди бачите реальний стан справ у компанії в режимі реального часу.</p>
-                    </div>
-                </article>
+    <section class="sap-comparison">
+        <div class="container">
+            <h2>SAP Business One vs Локальні системи (1С/BAS)</h2>
+            <div class="table-container glass-card">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Критерій порівняння</th>
+                            <th>Локальні системи (1С/BAS)</th>
+                            <th class="highlight">SAP Business One</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Цілісність даних</td>
+                            <td>"Зоопарк" програм, постійна синхронізація</td>
+                            <td class="highlight">Єдина база даних для всіх процесів</td>
+                        </tr>
+                        <tr>
+                            <td>Технологічна база</td>
+                            <td>Застарілі файлові або SQL бази</td>
+                            <td class="highlight">Інноваційна SAP HANA (In-Memory)</td>
+                        </tr>
+                        <tr>
+                            <td>Масштабованість</td>
+                            <td>Обмежена, потребує переписування коду</td>
+                            <td class="highlight">Легке зростання до рівня корпорації</td>
+                        </tr>
+                        <tr>
+                            <td>Міжнародна звітність</td>
+                            <td>Потребує складних ручних трансформацій</td>
+                            <td class="highlight">Вбудовані стандарти IFRS "з коробки"</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
         </div>
     </section>
 
