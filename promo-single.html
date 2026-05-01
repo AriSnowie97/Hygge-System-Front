@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кейси | Hygge System</title>
+    <title>Акція | Hygge System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-promos">
 
-    <header class="navbar">
+<header class="navbar">
         <a href="index.html" class="logo">Hygge<strong>System</strong></a>
         
         <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
@@ -41,47 +43,52 @@
         </nav>
     </header>
 
-    <section class="inner-hero">
-    <div class="container">
-        <h1>Акції та Спецпропозиції</h1>
-        <p>Ми цінуємо наших клієнтів і регулярно готуємо вигідні умови для старту автоматизації.</p>
-    </div>
-</section>
-
-<section class="page-content" style="padding-top: 0;">
-    <div class="container">
-        <div class="cards-grid">
-            <article class="item-card promo-highlight">
-                <div class="card-image">
-                    <span class="card-tag promo">Знижка -20%</span>
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Sale">
-                </div>
-                <div class="card-body">
-                    <div class="card-meta">⏳ Тільки до 31.05.2026</div>
-                    <h3>Весняний старт з SAP Business One</h3>
-                    <p>Отримайте знижку на ліцензії при замовленні повного циклу впровадження до кінця травня.</p>
-                    <a href="promo-single.html" class="btn-primary" style="margin-top: auto;">Отримати знижку</a>
-                </div>
-            </article>
-
-            <article class="item-card">
-                <div class="card-image">
-                    <span class="card-tag promo">Безкоштовно</span>
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Audit">
-                </div>
-                <div class="card-body">
-                    <div class="card-meta">⏳ Постійна акція</div>
-                    <h3>Технічний аудит ваших бізнес-процесів</h3>
-                    <p>Наші експерти проведуть аналіз вашої поточної системи та знайдуть точки зростання абсолютно безкоштовно.</p>
-                    <a href="#" class="btn-primary" style="margin-top: auto;">Записатися на аудит</a>
-                </div>
-            </article>
+    <section class="inner-hero" style="margin-bottom: 40px;">
+        <div class="container">
+            <span class="card-tag promo">Знижка -20%</span>
+            <h1>Весняний старт з SAP Business One</h1>
         </div>
-    </div>
-</section>
+    </section>
 
+    <section class="page-content">
+        <div class="container">
+            <div class="promo-single-layout">
+                
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80" alt="Акція" class="promo-cover">
 
-<footer class="footer">
+                <div class="promo-text-content">
+                    <h2>Умови спеціальної пропозиції</h2>
+                    <p>Тільки до кінця травня ми пропонуємо ексклюзивні умови для нових клієнтів. Замовте повний цикл впровадження системи та отримайте знижку 20% на всі ліцензії користувачів.</p>
+                    
+                    <ul class="promo-benefits">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D500F9" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Безкоштовний передпроектний аудит
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D500F9" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            -20% на ліцензії SAP Starter Package
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D500F9" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Пріоритетна підтримка на 3 місяці
+                        </li>
+                    </ul>
+
+                    <div class="promo-action-box glass-card">
+                        <div class="promo-deadline">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Пропозиція діє до 31.05.2026
+                        </div>
+                        <a href="#consultation" class="btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">Забронювати знижку</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col branding">
                 <a href="/" class="logo">Hygge<strong style="color:var(--accent-blue)">System</strong></a>
@@ -127,5 +134,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+
     </body>
 </html>

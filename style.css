@@ -325,6 +325,18 @@ fieldset { border: none; padding: 0; margin: 0; }
     .hero h1 { font-size: 2.8rem; }
     .hero-buttons { justify-content: center; }
     .cta-text h2 { text-align: center; }
+
+    /* 1. Повертаємо форму по центру на мобільних екранах */
+    .cta-container, 
+    .form-wrapper, /* Якщо у тебе інший клас обгортки форми, заміни на свій */
+    form {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центруємо всі елементи всередині */
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -333,7 +345,7 @@ fieldset { border: none; padding: 0; margin: 0; }
     .hero-buttons { flex-direction: column; }
     .btn-primary, .btn-secondary { width: 100%; }
     h2 { font-size: 2.2rem; margin-bottom: 30px; }
-    section { padding: 60px 0; }
+    section { padding: 5px 0; }
     /* Повертаємо безпечні бокові відступи для планшетів та телефонів */
     .container {
         padding-left: 25px !important;
@@ -1306,6 +1318,12 @@ section.inner-hero {
     .card-body h3 { font-size: 1.3rem; }
     .card-body p { margin-bottom: 20px; flex-grow: 0; }
     .btn-link { align-self: center !important; }
+
+    /* 2. Рятуємо заголовки від "з'їдання" менюшкою на нових сторінках */
+    .inner-hero, 
+    .sap-hero {
+        padding-top: 180px !important; /* Збільшуємо відступ (було 150px або менше) */
+    }
 }
 
 /* =======================================================
@@ -1602,4 +1620,147 @@ section.inner-hero {
 @media (max-width: 992px) {
     .sap-intro-grid, .tech-layout { grid-template-columns: 1fr; flex-direction: column; gap: 40px; }
     .stat-card h3 { font-size: 2.2rem; }
+}
+
+/* =======================================================
+   СТИЛІ ДЛЯ СТОРІНКИ КЕЙСУ (Дві колонки)
+   ======================================================= */
+.case-single-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* Ліва колонка 320px, права - весь вільний простір */
+    gap: 50px;
+    align-items: start; /* Щоб бокова панель не розтягувалася вниз */
+}
+
+.case-sidebar {
+    padding: 30px;
+    border-radius: 20px;
+    position: sticky; /* Бокова панель буде "їхати" за екраном при скролі */
+    top: 120px; 
+}
+
+.case-sidebar h3 {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 15px;
+}
+
+.case-details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.case-details-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.case-details-list svg {
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.case-cover {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    box-shadow: var(--glass-shadow);
+}
+
+.case-main-content h2 {
+    text-align: left;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+}
+
+.case-main-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.result-highlight {
+    padding: 40px;
+    border-radius: 24px;
+    margin-top: 50px;
+    border-left: 4px solid var(--accent-blue); /* Гарна лінія зліва */
+}
+
+/* =======================================================
+   СТИЛІ ДЛЯ СТОРІНКИ АКЦІЇ (Центрований фокус)
+   ======================================================= */
+.promo-single-layout {
+    max-width: 800px; /* Робимо контент вужчим, щоб сфокусувати увагу */
+    margin: 0 auto;
+}
+
+.promo-cover {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 40px;
+}
+
+.promo-text-content h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.promo-text-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.promo-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.promo-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.promo-action-box {
+    padding: 40px;
+    text-align: center;
+    border-radius: 24px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(145deg, var(--glass-bg), rgba(213, 0, 249, 0.05));
+    border: 2px dashed rgba(213, 0, 249, 0.3); /* Пунктирна рамка як купон на знижку */
+}
+
+.promo-deadline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #ef4444; /* Червоний колір дедлайну */
+    font-size: 1.2rem;
+}
+
+/* =======================================================
+   АДАПТИВ (Планшети та телефони)
+   ======================================================= */
+@media (max-width: 992px) {
+    .case-single-layout {
+        grid-template-columns: 1fr; /* На телефоні бокова панель їде наверх */
+    }
+    .case-sidebar {
+        position: static; /* Вимикаємо "прилипання" при скролі на телефоні */
+    }
 }

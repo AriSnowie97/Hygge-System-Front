@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кейси | Hygge System</title>
+    <title>Кейс | Hygge System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-cases">
 
-    <header class="navbar">
+<header class="navbar">
         <a href="index.html" class="logo">Hygge<strong>System</strong></a>
         
         <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
@@ -41,46 +43,56 @@
         </nav>
     </header>
 
-    <section class="inner-hero">
-    <div class="container">
-        <h1>Акції та Спецпропозиції</h1>
-        <p>Ми цінуємо наших клієнтів і регулярно готуємо вигідні умови для старту автоматизації.</p>
-    </div>
-</section>
-
-<section class="page-content" style="padding-top: 0;">
-    <div class="container">
-        <div class="cards-grid">
-            <article class="item-card promo-highlight">
-                <div class="card-image">
-                    <span class="card-tag promo">Знижка -20%</span>
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Sale">
-                </div>
-                <div class="card-body">
-                    <div class="card-meta">⏳ Тільки до 31.05.2026</div>
-                    <h3>Весняний старт з SAP Business One</h3>
-                    <p>Отримайте знижку на ліцензії при замовленні повного циклу впровадження до кінця травня.</p>
-                    <a href="promo-single.html" class="btn-primary" style="margin-top: auto;">Отримати знижку</a>
-                </div>
-            </article>
-
-            <article class="item-card">
-                <div class="card-image">
-                    <span class="card-tag promo">Безкоштовно</span>
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Audit">
-                </div>
-                <div class="card-body">
-                    <div class="card-meta">⏳ Постійна акція</div>
-                    <h3>Технічний аудит ваших бізнес-процесів</h3>
-                    <p>Наші експерти проведуть аналіз вашої поточної системи та знайдуть точки зростання абсолютно безкоштовно.</p>
-                    <a href="#" class="btn-primary" style="margin-top: auto;">Записатися на аудит</a>
-                </div>
-            </article>
+    <section class="inner-hero" style="margin-bottom: 60px;">
+        <div class="container">
+            <span class="card-tag">Виробництво</span>
+            <h1>Автоматизація заводу металоконструкцій на базі SAP B1</h1>
         </div>
-    </div>
-</section>
+    </section>
 
+    <section class="page-content">
+        <div class="container">
+            <div class="case-single-layout">
+                
+                <aside class="case-sidebar glass-card">
+                    <h3>Деталі проекту</h3>
+                    <ul class="case-details-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <div><strong>Клієнт:</strong> ТОВ "МеталБуд"</div>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <div><strong>Термін:</strong> 4 місяці</div>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            <div><strong>Результат:</strong> +40% до швидкості обробки</div>
+                        </li>
+                    </ul>
+                </aside>
 
+                <div class="case-main-content">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Завод" class="case-cover">
+                    
+                    <h2>Задача клієнта</h2>
+                    <p>Клієнт звернувся до нас із проблемою втрати інформації між відділами. Закупівлі не знали точних залишків на складі, а виробництво простоювало через відсутність матеріалів.</p>
+
+                    <h2>Рішення Hygge System</h2>
+                    <p>Ми впровадили модуль виробництва та управління запасами SAP Business One. Налаштували автоматичне створення замовлень на закупівлю на основі мінімальних залишків.</p>
+
+                    <div class="result-highlight glass-card">
+                        <h3>Головний результат</h3>
+                        <p>Усунення касових розривів та скорочення часу виконання замовлення на 40% за рахунок прозорого планування.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="article-footer" style="margin-top: 50px;">
+                <a href="cases.html" class="btn-secondary">← Всі реалізовані проекти</a>
+            </div>
+        </div>
+    </section>
 <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col branding">
@@ -100,7 +112,7 @@
                     <li><a href="#solution">Можливості SAP</a></li>
                     <li><a href="#services">Послуги</a></li>
                     <li><a href="#process">Етапи роботи</a></li>
-                    <li><a href="#cases">Кейси</a></li>
+                    <li><a href="cases.html">Кейси</a></li>
                 </ul>
             </div>
             
