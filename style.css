@@ -1764,3 +1764,389 @@ section.inner-hero {
         position: static; /* Вимикаємо "прилипання" при скролі на телефоні */
     }
 }
+
+/* =======================================================
+   СТИЛІ ДЛЯ СТОРІНКИ МІГРАЦІЇ
+   ======================================================= */
+.migration-section {
+    padding-top: 80px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    position: relative; /* Потрібно для псевдоелемента */
+    padding-top: 20px;
+}
+
+/* Створюємо горизонтальну лінію */
+.section-header h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Центруємо лінію */
+    width: 550px; /* Довжина лінії */
+    height: 2.5px; /* Товщина лінії */
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* --- СУЦІЛЬНА ПЛАШКА ДЛЯ ІНДУСТРІЙ --- */
+.glass-plaque {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 20px 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: var(--glass-shadow);
+}
+
+.plaque-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Лінія між рядками */
+}
+
+.plaque-row:last-child {
+    border-bottom: none; /* Прибираємо лінію у останнього рядка */
+}
+
+.plaque-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: rgba(0, 71, 255, 0.1);
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.plaque-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.plaque-text p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- НАЙВАЖЛИВІШЕ: ГРАДІЄНТНІ АКЦЕНТНІ КАРТКИ --- */
+.gradient-accent-card {
+    position: relative;
+    /* ТУТ ЗМІНЮЄМО ФОН: робимо його більш щільним (не таким прозорим) */
+    background: rgba(15, 23, 42, 0.85); /* Темно-синій, майже непрозорий фон */
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(213, 0, 249, 0.05); /* Легке неонове світіння */
+    transition: transform 0.3s ease;
+}
+
+.gradient-accent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(213, 0, 249, 0.15);
+}
+
+/* Магія: Градієнтна рамка навколо картки */
+.gradient-accent-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px; /* Товщина градієнтної рамки */
+    background: var(--accent-gradient); /* Наш фірмовий градієнт */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.gradient-accent-card .card-body {
+    padding: 30px;
+}
+
+.gradient-accent-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Градієнтний текст заголовка */
+}
+
+.gradient-accent-card p {
+    color: rgba(255, 255, 255, 0.8); /* Робимо опис світлішим */
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Адаптив для плашки */
+@media (max-width: 768px) {
+    .glass-plaque {
+        padding: 20px;
+    }
+    .plaque-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+/* Єдина панель для Локалізації */
+.localization-panel {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* ДОДАЄМО СЮДИ 40px ПОВІТРЯ МІЖ КОЛОНКАМИ */
+    padding: 50px !important;
+}
+
+.loc-item {
+    flex: 1;
+    text-align: center;
+    /* padding: 0 20px;  <-- Цей рядок можна видалити, gap тепер робить відступи замість нього */
+}
+
+/* =======================================================
+   MEGA MENU STYLES (Glassmorphism)
+   ======================================================= */
+
+.dropdown {
+    position: static; /* Важно: чтобы меню могло быть широким */
+}
+
+/* Контейнер самого меню */
+.mega-menu {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    width: 95%;
+    max-width: 1100px;
+    
+    /* 🔥 ВАЖЛИВО: ОСЬ ЦІ ТРИ РЯДКИ РЯТУЮТЬ ЧИТАБЕЛЬНІСТЬ */
+    background: rgba(255, 255, 255, 0.95) !important; /* Дуже щільний темний фон (95% непрозорості) */
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(224, 211, 255, 0.438);
+    
+    border-radius: 24px;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 50px rgba(175, 175, 175, 0.5); /* Більш густа тінь, щоб відірвати меню від фону */
+    z-index: 1000;
+}
+
+/* Появление при наведении */
+.dropdown:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    top: 100%; /* Прилипает к низу навбара */
+}
+
+.mega-menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 40px;
+}
+
+.mega-column h4 {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 12px;
+}
+
+.mega-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mega-column ul li {
+    margin-bottom: 12px;
+}
+
+.mega-column ul li a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.mega-column ul li a:hover {
+    color: var(--accent-blue);
+    padding-left: 8px; /* Небольшой эффект сдвига при наведении */
+}
+
+/* Адаптив: на мобилках лучше превратить в обычный список или аккордеон */
+@media (max-width: 992px) {
+    .mega-menu {
+        position: relative;
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 20px;
+        display: none; /* Скрываем по умолчанию на мобайле */
+    }
+    .dropdown:hover .mega-menu {
+        display: block;
+        transform: none;
+    }
+    .mega-menu-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* =======================================================
+   ЗВИЧАЙНЕ ВИПАДАЮЧЕ МЕНЮ (Під конкретним пунктом)
+   ======================================================= */
+.simple-dropdown {
+    position: relative !important; /* ВАЖЛИВО: Тримає меню рівно під собою */
+}
+
+.simple-menu {
+    position: absolute;
+    top: 100%; /* Одразу під навбаром */
+    left: 0;   /* Вирівнювання по лівому краю тексту "Про нас" */
+    width: 125px; /* Акуратна ширина */
+    background: rgba(255, 255, 255, 0.95); /* Щільний темний фон, як у Мега-меню */
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+/* Поява при наведенні */
+.simple-dropdown:hover .simple-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.simple-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.simple-menu ul li {
+    margin-bottom: 5px;
+}
+
+.simple-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.simple-menu ul li a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+/* Ефект при наведенні на пункт */
+.simple-menu ul li a:hover {
+    color: var(--accent-blue);
+    padding-left: 20px; /* Текст трохи зсувається вправо */
+}
+
+/* =======================================================
+   ФИКС МОБИЛЬНОГО МЕНЮ (ДЛЯ ВСЕХ ТИПОВ ВЫПАДАШЕК)
+   ======================================================= */
+@media (max-width: 992px) {
+    /* 1. Делаем подменю полноэкранным и прячем за правым краем экрана */
+    .mega-menu, .simple-menu {
+        position: fixed !important;
+        top: 0 !important;
+        left: 100% !important; /* Убрали за правый край */
+        width: 100vw !important;
+        height: 100vh !important;
+        
+        /* Добавляем твой фирменный эффект стекла на весь экран */
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: var(--blur) !important;
+        -webkit-backdrop-filter: var(--blur) !important;
+        
+        z-index: 1001 !important; /* Чтобы перекрыть основное меню */
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Супер-плавный выезд */
+        
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        overflow-y: auto !important; /* Скролл, если меню длинное */
+        padding: 80px 20px 40px !important; /* Отступы: сверху место для "Назад" и бургера */
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+        border: none !important;
+    }
+
+    /* 2. Когда кликнули — меню выезжает на экран */
+    .dropdown.active .mega-menu,
+    .simple-dropdown.active .simple-menu {
+        left: 0 !important; 
+    }
+
+    /* 3. Стили для кнопки "Назад", которую добавит JS */
+    .mobile-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--accent-blue); /* Используем твой синий цвет */
+        cursor: pointer;
+        padding: 10px 15px;
+        margin-bottom: 25px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 12px;
+        width: fit-content;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    /* 4. Центрируем контент */
+    .mega-menu-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .mega-column { width: 100% !important; margin-bottom: 10px; }
+}

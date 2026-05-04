@@ -1,37 +1,68 @@
-// === ЛОГІКА БУРГЕР-МЕНЮ ===
-// Логіка бургер-меню та анімації хрестика
+// === ЛОГІКА БУРГЕР-МЕНЮ (ЕФЕКТ APP-ДОДАТКУ) ===
 const burgerBtn = document.getElementById('burger-btn');
 const navContainer = document.querySelector('.nav-container');
 
 if (burgerBtn && navContainer) {
-    burgerBtn.addEventListener('click', () => {
-        // Відкриваємо/закриваємо меню
-        navContainer.classList.toggle('active');
-        // Перетворюємо бургер на хрестик і назад
-        burgerBtn.classList.toggle('toggle');
+    // 1. Автоматично створюємо кнопку "Назад" для мобільних екранів
+    document.querySelectorAll('.mega-menu, .simple-menu').forEach(menu => {
+        if (!menu.querySelector('.mobile-back-btn')) {
+            const backBtn = document.createElement('div');
+            backBtn.className = 'mobile-back-btn';
+            backBtn.innerHTML = '⬅ Назад'; // Стрілочка та текст
+            
+            // Вставляємо кнопку на самий початок меню
+            if(menu.classList.contains('mega-menu')) {
+                menu.querySelector('.mega-menu-container').prepend(backBtn);
+            } else {
+                menu.prepend(backBtn);
+            }
+
+            // Закриваємо поточне підменю при кліку на "Назад"
+            backBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                menu.closest('.nav-item').classList.remove('active');
+            });
+        }
     });
 
-    // Закриття меню при кліку на будь-яке посилання
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
+    // 2. Логіка відкриття/закриття основного бургер-меню
+    burgerBtn.addEventListener('click', () => {
+        navContainer.classList.toggle('active');
+        burgerBtn.classList.toggle('toggle');
+        
+        // Якщо ми закриваємо меню хрестиком, ховаємо й усі відкриті підменю
+        if (!navContainer.classList.contains('active')) {
+            document.querySelectorAll('.nav-item.active').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+
+    // 3. Логіка кліків по посиланнях "Програми" та "Про нас"
+    document.querySelectorAll('.nav-links > .nav-item > a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const parentLi = this.parentElement;
+            
+            if (parentLi.classList.contains('dropdown') || parentLi.classList.contains('simple-dropdown')) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault(); 
+                    // Додаємо клас active, щоб меню плавно виїхало збоку
+                    parentLi.classList.add('active'); 
+                }
+                return; 
+            }
+
+            // Для звичайних посилань - закриваємо все меню і повертаємо на сторінку
             if (link.getAttribute('href') !== '#!') {
                 navContainer.classList.remove('active');
-                burgerBtn.classList.remove('toggle'); // Повертаємо три смужки
+                burgerBtn.classList.remove('toggle');
+                document.querySelectorAll('.nav-item.active').forEach(item => {
+                    item.classList.remove('active');
+                });
             }
         });
     });
-}
-
-// Скрипт для табів "Рішення"
-function switchTab(tabId, btn) {
-    // Знімаємо клас active з усіх кнопок
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    // Знімаємо клас active з усіх панелей
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    
-    // Додаємо active натиснутій кнопці та відповідній панелі
-    btn.classList.add('active');
-    document.getElementById(tabId).classList.add('active');
 }
 
 // === МАГІЯ СИНХРОНІЗАЦІЇ КАРТОК І ТАБІВ НА МОБІЛЬНОМУ ===
