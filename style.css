@@ -1858,7 +1858,7 @@ section.inner-hero {
 .gradient-accent-card {
     position: relative;
     /* ТУТ ЗМІНЮЄМО ФОН: робимо його більш щільним (не таким прозорим) */
-    background: rgba(15, 23, 42, 0.85); /* Темно-синій, майже непрозорий фон */
+    background: rgba(255, 255, 255, 0.85); /* Темно-синій, майже непрозорий фон */
     backdrop-filter: blur(20px);
     border-radius: 24px;
     overflow: hidden;
@@ -1897,7 +1897,7 @@ section.inner-hero {
 }
 
 .gradient-accent-card p {
-    color: rgba(255, 255, 255, 0.8); /* Робимо опис світлішим */
+    color: rgba(0, 0, 0, 0.8); /* Робимо опис світлішим */
     line-height: 1.6;
     margin-bottom: 0;
 }
