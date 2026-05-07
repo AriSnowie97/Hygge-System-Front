@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перехід з інших програм | Hygge System</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Перехід на SAP Business One | Hygge System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
 </head>
-<body class="page-migration">
-
-        <header class="navbar">
+<body id="migration-page"> <header class="navbar">
         <a href="index.html" class="logo">Hygge<strong>System</strong></a>
         
         <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
@@ -24,40 +20,53 @@
                 <li class="nav-item dropdown">
                 <a href="#" class="nav-link">Програми</a>
                     <div class="mega-menu">
-                        <div class="mega-menu-container">
-                            
-                            <div class="mega-column">
-                                <h4>Функціональні модулі</h4>
-                                <ul>
-                                    <li><a href="sap-b1.html">Управління фінансами</a></li>
-                                    <li><a href="sap-b1.html">CRM та продажі</a></li>
-                                    <li><a href="sap-b1.html">Закупівлі та Склад</a></li>
-                                    <li><a href="sap-b1.html">Виробництво та MRP</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="mega-column">
-                                <h4>Індустріальні рішення</h4>
-                                <ul>
-                                    <li><a href="migration.html">Retail — Роздрібна торгівля</a></li>
-                                    <li><a href="migration.html">WMS — Логістика</a></li>
-                                    <li><a href="migration.html">Автоматизація виробництва</a></li>
-                                    <li><a href="migration.html">Сервісні центри</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="mega-column">
-                                <h4>Локалізація для України</h4>
-                                <ul>
-                                    <li><a href="migration.html">Українська бухгалтерія</a></li>
-                                    <li><a href="migration.html">Зарплата та Кадри</a></li>
-                                    <li><a href="migration.html">Е-документообіг (Вчасно/Medoc)</a></li>
-                                    <li><a href="migration.html">Інтеграція з банками</a></li>
-                                </ul>
-                            </div>
+    <div class="mega-menu-container">
+        
+        <div class="mega-column">
+            <h4>Функціонал SAP</h4>
+            <ul>
+                <li><a href="sap-b1.html">Управління фінансами</a></li>
+                <li><a href="sap-b1.html">Продажі та клієнти (CRM)</a></li>
+                <li><a href="sap-b1.html">Закупівлі та склад</a></li>
+                <li><a href="sap-b1.html">Виробництво та MRP</a></li>
+                <li><a href="sap-b1.html">Управління проектами</a></li>
+            </ul>
+        </div>
 
-                        </div>
-                    </div>
+        <div class="mega-column">
+            <h4>Галузі</h4>
+            <ul>
+                <li><a href="sap-b1.html">Дистрибуція</a></li>
+                <li><a href="sap-b1.html">Роздрібна торгівля</a></li>
+                <li><a href="sap-b1.html">Харчова промисловість</a></li>
+                <li><a href="sap-b1.html">Сервісне обслуговування</a></li>
+                <li><a href="sap-b1.html">Виробництво меблів</a></li>
+            </ul>
+        </div>
+
+        <div class="mega-column">
+            <h4>Аналітика та IT</h4>
+            <ul>
+                <li><a href="sap-b1.html">Звітність (Crystal Reports)</a></li>
+                <li><a href="sap-b1.html">Інтеграція з E-commerce</a></li>
+                <li><a href="sap-b1.html">Мобільні додатки</a></li>
+                <li><a href="sap-b1.html">Хмарне рішення (Cloud)</a></li>
+                <li><a href="sap-b1.html">SAP HANA Service</a></li>
+            </ul>
+        </div>
+
+        <div class="mega-column">
+            <h4>Підтримка</h4>
+            <ul>
+                <li><a href="sap-b1.html">Навчання персоналу</a></li>
+                <li><a href="sap-b1.html">Технічний аудит</a></li>
+                <li><a href="sap-b1.html">Оновлення системи</a></li>
+                <li><a href="sap-b1.html">Консультації 24/7</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
                 </li>
                 <li><a href="sap-b1.html">SAP Business One</a></li>
                 <li><a href="migration.html">Перехід з інших програм</a></li>
@@ -76,125 +85,189 @@
         </nav>
     </header>
 
-    <section class="inner-hero sap-hero">
+    <section class="hero sap-hero">
         <div class="container">
-            <span class="badge">Міграція та Розвиток</span>
-            <h1>Перехід з інших програм на SAP Business One</h1>
-            <p>Позбавтеся залежності від застарілих систем. Перенесіть свій бізнес на надійну міжнародну платформу з повною адаптацією під українське законодавство.</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">Міграція та Розвиток</span>
+                    <h1>Перехід на SAP Business One</h1>
+                    <p>Позбавтеся залежності від застарілих систем. Перенесіть бізнес на міжнародну платформу з повною адаптацією під Україну.</p>
+                    <div class="hero-btns">
+                        <a href="#consultation" class="btn-primary">Замовити аудит</a>
+                        <a href="#modules" class="btn-secondary">Етапи переходу</a>
+                    </div>
+                </div>
+
+                <figure class="hero-visual">
+                    <div class="mockup-placeholder">Міграція даних на SAP</div>
+                    <figcaption class="sr-only">Інтерфейс системи SAP Business One</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">З яких систем ми переводимо бізнес</h2>
+            <div class="mig-grid-6">
+                <div class="item-card"><h4>1С / BAS</h4><p>Повна заміна російського софту</p></div>
+                <div class="item-card"><h4>Odoo</h4><p>Перехід на стабільне ядро</p></div>
+                <div class="item-card"><h4>Dynamics</h4><p>Оптимізація вартості</p></div>
+                <div class="item-card"><h4>Excel</h4><p>Від хаосу до єдиної бази</p></div>
+                <div class="item-card"><h4>Самописні</h4><p>Стандартизація процесів</p></div>
+                <div class="item-card"><h4>Застарілі ERP</h4><p>Технологічне оновлення</p></div>
+            </div>
         </div>
     </section>
 
-    <div class="page-content">
-        <section class="migration-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Функціональні модулі</h2>
-                    <p>Базовий функціонал, який покриває потреби сучасного бізнесу в єдиній базі.</p>
-                </div>
-                
-                <div class="cards-grid">
-                    <article class="item-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" style="margin-bottom: 20px;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                            <h3>Фінанси та облік</h3>
-                            <p>Повний контроль грошових потоків, бюджетування, план рахунків та мультивалютність.</p>
-                        </div>
-                    </article>
-                    <article class="item-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" style="margin-bottom: 20px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <h3>Продажі та CRM</h3>
-                            <p>Управління воронкою продажів, історія взаємодії з клієнтами та аналітика угод.</p>
-                        </div>
-                    </article>
-                    <article class="item-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" style="margin-bottom: 20px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            <h3>Запаси та Логістика</h3>
-                            <p>Управління складами, серійними номерами, партіями та оптимізація закупівель.</p>
-                        </div>
-                    </article>
-                </div>
+    <section class="section" style="background: var(--bg-light-blue);">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Чому компанії обирають міграцію</h2>
+            <div class="mig-grid-6">
+                <div class="item-card"><h4>Розрізнені дані</h4><p>Хаос у різних програмах</p></div>
+                <div class="item-card"><h4>Ручна робота</h4><p>Помилки через людський фактор</p></div>
+                <div class="item-card"><h4>Брак аналітики</h4><p>Неможливість бачити KPI</p></div>
+                <div class="item-card"><h4>Масштабування</h4><p>Старий софт гальмує ріст</p></div>
+                <div class="item-card"><h4>Безпека</h4><p>Ризики втрати інформації</p></div>
+                <div class="item-card"><h4>Залежність</h4><p>Від локальних розробників</p></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="migration-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Індустріальні рішення</h2>
-                    <p>Спеціалізовані конфігурації для конкретних галузей економіки.</p>
-                </div>
-                
-                <div class="glass-plaque">
-                    <div class="plaque-row">
-                        <div class="plaque-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        </div>
-                        <div class="plaque-text">
-                            <h3>Рішення для Ритейлу</h3>
-                            <p>Управління мережею торгових точок, програмами лояльності, інтеграція з POS-обладнанням.</p>
-                        </div>
-                    </div>
-                    <div class="plaque-row">
-                        <div class="plaque-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                        </div>
-                        <div class="plaque-text">
-                            <h3>Дистрибуція та Логістика</h3>
-                            <p>Планування маршрутів, складська логістика (WMS), інтеграція з кур'єрськими службами.</p>
-                        </div>
-                    </div>
-                    <div class="plaque-row">
-                        <div class="plaque-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                        </div>
-                        <div class="plaque-text">
-                            <h3>Сервісне обслуговування</h3>
-                            <p>Планування виїздів майстрів, облік запчастин, керування гарантійними контрактами.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="migration-section" style="padding-bottom: 100px;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Локалізація для України</h2>
-                    <p>Повна відповідність законодавству — головна причина обрати SAP B1 замість 1С.</p>
-                </div>
-                
-                <div class="cards-grid">
-                    <div class="gradient-accent-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2" style="margin-bottom: 20px;">
-                                <defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FF007F" /><stop offset="100%" stop-color="#0047FF" /></linearGradient></defs>
-                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                            <h3>Податковий облік</h3>
-                            <p>Автоматичне формування ПН, декларацій з ПДВ та іншої звітності згідно з Податковим кодексом.</p>
-                        </div>
-                    </div>
-                    <div class="gradient-accent-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2" style="margin-bottom: 20px;"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
-                            <h3>Зарплата та Кадри</h3>
-                            <p>Нарахування виплат, облік відпусток та лікарняних, автоматичні звіти ЄСВ та ПДФО.</p>
-                        </div>
-                    </div>
-                    <div class="gradient-accent-card">
-                        <div class="card-body">
-                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="url(#grad)" stroke-width="2" style="margin-bottom: 20px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            <h3>Електронні документи</h3>
-                            <p>Пряма інтеграція з сервісами Вчасно та M.E.Doc для обміну актами та рахунками з КЕП.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Що переноситься в SAP B1?</h2>
+            <div class="orbit-wrap">
+    <div class="orbit-center">
+        <span>Дані</span>
     </div>
+    
+    <div class="orbit-items">
+        <div class="orbit-item oi-1">Клієнти</div>
+        <div class="orbit-item oi-2">Товари</div>
+        <div class="orbit-item oi-3">Довідники</div>
+        <div class="orbit-item oi-4">Залишки</div>
+        <div class="orbit-item oi-5">Документи</div>
+        <div class="orbit-item oi-6">Фінанси</div>
+        <div class="orbit-item oi-7">Історія</div>
+    </div>
+</div>
+        </div>
+    </section>
 
-    <footer class="footer">
+    
+        <section class="process" id="process">
+            <div class="container">
+                <h2>Як проходить перехід</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Аудит</h3>
+                            <p>Аналіз поточної системи.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Карта даних</h3>
+                            <p>План перенесення полів.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Перенесення</h3>
+                            <p>Технічна міграція бази.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Тестування</h3>
+                            <p>Перевірка результатів.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Запуск</h3>
+                            <p>Старт роботи та підтримка.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <section class="transition" id="transition">
+            <div class="container">
+                <div class="transition-center-box">
+                    <h2>Міграція без зупинки бізнесу</h2>
+                    <p>Ми проводимо перенесення даних паралельно з вашою поточною діяльністю. Перехід відбувається у вихідні або в узгоджене вікно.</p>
+                    <a href="#!" class="btn-primary">Обговорити ваш проект</a>
+                </div>
+            </div>
+        </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Ризики та їх закриття</h2>
+            <div class="table-wrap glass-card">
+                <table class="m-table">
+                    <thead><tr><th>Ризик</th><th>Як закриваємо</th></tr></thead>
+                    <tbody>
+                        <tr><td>Втрата даних</td><td>Тестова міграція перед запуском</td></tr>
+                        <tr><td>Помилки в довідниках</td><td>Очистка та нормалізація даних</td></tr>
+                        <tr><td>Спротив персоналу</td><td>Покрокове навчання команди</td></tr>
+                        <tr><td>Зупинка процесів</td><td>Поетапний запуск модулів</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-light-blue);">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Чому саме SAP Business One</h2>
+            <div class="mig-grid-4">
+                <div class="item-card"><h4>Масштабованість</h4><p>Ріст без меж.</p></div>
+                <div class="item-card"><h4>Міжнародність</h4><p>Світовий стандарт.</p></div>
+                <div class="item-card"><h4>Єдина база</h4><p>Без хаосу.</p></div>
+                <div class="item-card"><h4>Локалізація</h4><p>Під Україну.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contacts">
+            <div class="container cta-wrapper">
+                <div class="cta-text">
+                    <h2>Запросити консультацію</h2>
+                    <p>Залиште заявку, і ми проведемо аналіз вашої системи безкоштовно.</p>
+                </div>
+                
+                <form class="cta-form" action="#" method="POST">
+                    <fieldset style="border:none; padding:0; margin:0;">
+                        <legend class="sr-only">Форма заявки</legend>
+                        <div class="form-group">
+                            <label for="name">Ім'я</label>
+                            <input type="text" id="name" name="name" placeholder="Олександр" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Телефон або Email</label>
+                            <input type="text" id="contact" name="contact" placeholder="+380... або email" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Записатись на консультацію</button>
+                        <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small></p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+<footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col branding">
                 <a href="/" class="logo">Hygge<strong style="color:var(--accent-blue)">System</strong></a>
@@ -209,11 +282,11 @@
             <div class="footer-col">
                 <h3>Карта сайту</h3>
                 <ul>
-                    <li><a href="#hero">Головна</a></li>
+                    <li><a href="inde">Головна</a></li>
                     <li><a href="#solution">Можливості SAP</a></li>
                     <li><a href="#services">Послуги</a></li>
                     <li><a href="#process">Етапи роботи</a></li>
-                    <li><a href="#cases">Кейси</a></li>
+                    <li><a href="cases.html">Кейси</a></li>
                 </ul>
             </div>
             
@@ -240,6 +313,5 @@
         </div>
     </footer>
     <script src="script.js"></script>
-
-    </body>
+</body>
 </html>
