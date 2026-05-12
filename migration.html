@@ -51,7 +51,7 @@
                 <li><a href="sap-b1.html">Інжиніринг</a></li>
                 <li><a href="sap-b1.html">Легка промисловість</a></li>
                 <li><a href="sap-b1.html">Аерокосмічна та оборонна галузь</a></li>
-                <li><a href="sap-b1.html">Дивитись всі</a></li>
+                <li><a href="sap-b1.html" style="font-weight: 900; color:blue;">Дивитись всі</a></li>
             </ul>
         </div>
 
@@ -67,7 +67,8 @@
 </div>
                 </li>
                 <li><a href="sap-b1.html">SAP Business One</a></li>
-                <li><a href="migration.html">Перехід з інших програм</a></li>
+                <li><a href="migration.html" class="nav-btn-special">Перехід з інших програм</a></li>
+                <li><a href="promos.html" class="nav-promo-highlight">Акції</a></li>
                 <li class="nav-item simple-dropdown">
                     <a href="#" class="nav-link">Про нас</a>
                     <div class="simple-menu">
@@ -75,7 +76,6 @@
                             <li><a href="cases.html">Кейси</a></li>
                             <li><a href="#contacts">Контакти</a></li>
                             <li><a href="blog.html">Блог</a></li>
-                            <li><a href="promos.html">Акції</a></li>
                         </ul>
                     </div>
                 </li>
@@ -118,19 +118,73 @@
         </div>
     </section>
 
-    <section class="section" style="background: var(--bg-light-blue);">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Чому компанії обирають міграцію</h2>
-            <div class="mig-grid-6">
-                <div class="item-card"><h4>Розрізнені дані</h4><p>Хаос у різних програмах</p></div>
-                <div class="item-card"><h4>Ручна робота</h4><p>Помилки через людський фактор</p></div>
-                <div class="item-card"><h4>Брак аналітики</h4><p>Неможливість бачити KPI</p></div>
-                <div class="item-card"><h4>Масштабування</h4><p>Старий софт гальмує ріст</p></div>
-                <div class="item-card"><h4>Безпека</h4><p>Ризики втрати інформації</p></div>
-                <div class="item-card"><h4>Залежність</h4><p>Від локальних розробників</p></div>
+    <section class="solution-tabs" id="solution">
+            <div class="container">
+                <hgroup style="text-align: left; margin-bottom: 40px;">
+                    <h2>Чому компанії обирають міграцію</h2>
+                </hgroup>
+                
+                <div class="tabs-layout">
+                    <div class="tabs-sidebar">
+                        <button class="tab-btn active" onclick="switchTab('tab1', this)">Розрізнені дані</button>
+                        <button class="tab-btn" onclick="switchTab('tab2', this)">Ручна робота</button>
+                        <button class="tab-btn" onclick="switchTab('tab3', this)">Брак аналітики</button>
+                        <button class="tab-btn" onclick="switchTab('tab4', this)">Масштабування</button>
+                        <button class="tab-btn" onclick="switchTab('tab5', this)">Безпека</button>
+                        <button class="tab-btn" onclick="switchTab('tab6', this)">Залежність</button>
+                    </div>
+                    
+                    <div class="tabs-content-area">
+                        <div id="tab1" class="tab-panel active">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Аналитика и дашборды" class="content-image">
+                            </div>
+                            <h3>Розрізнені дані</h3>
+                            <p>Коли кожен відділ працює у власному софті, дані дублюються або втрачаються, що створює повний хаос у звітності та заважає бачити реальну картину бізнесу.</p>
+                        </div>
+                        
+                        <div id="tab2" class="tab-panel">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Командная работа" class="content-image">
+                            </div>
+                            <h3>Повний контроль грошових потоків</h3>
+                            <p>Велика кількість механічних операцій призводить до критичних помилок через людський фактор, забирає дорогоцінний час працівників та гальмує всі процеси.</p>
+                        </div>
+                        
+                        <div id="tab3" class="tab-panel">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Финансы и отчеты" class="content-image">
+                            </div>
+                            <h3>Розумна автоматизація рутини</h3>
+                            <p>Відсутність оперативної звітності в реальному часі заважає відстежувати ключові показники (KPI) та приймати швидкі, обґрунтовані управлінські рішення.</p>
+                        </div>
+                        
+                        <div id="tab4" class="tab-panel">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Автоматизация склада" class="content-image">
+                            </div>
+                            <h3>Миттєві дашборди та звіти</h3>
+                            <p>Застарілі системи не мають гнучкості та потужності, щоб підтримувати розширення вашого бізнесу, відкриття нових філій чи вихід на міжнародні ринки.</p>
+                        </div>
+                        <div id="tab5" class="tab-panel">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Автоматизация склада" class="content-image">
+                            </div>
+                            <h3>Безпека</h3>
+                            <p>Відсутність чіткого розмежування прав доступу та слабкий захист створюють постійні ризики витоку конфіденційної інформації або безповоротної втрати даних.</p>
+                        </div>
+                        <div id="tab6" class="tab-panel">
+                            <div class="tab-image-placeholder">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Автоматизация склада" class="content-image">
+                            </div>
+                            <h3>Залежність</h3>
+                            <p>Ваш бізнес стає заручником окремих локальних розробників або системних адміністраторів, без яких неможливо внести навіть мінімальні зміни в систему.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
 
     <section class="section">
         <div class="container">
@@ -213,34 +267,85 @@
             </div>
         </section>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Ризики та їх закриття</h2>
-            <div class="table-wrap glass-card">
-                <table class="m-table">
-                    <thead><tr><th>Ризик</th><th>Як закриваємо</th></tr></thead>
-                    <tbody>
-                        <tr><td>Втрата даних</td><td>Тестова міграція перед запуском</td></tr>
-                        <tr><td>Помилки в довідниках</td><td>Очистка та нормалізація даних</td></tr>
-                        <tr><td>Спротив персоналу</td><td>Покрокове навчання команди</td></tr>
-                        <tr><td>Зупинка процесів</td><td>Поетапний запуск модулів</td></tr>
-                    </tbody>
-                </table>
+    <section class="section comparison-risks">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center;">Безпека вашого переходу</h2>
+        
+        <div class="comparison-grid">
+            <div class="comp-card risk-side">
+                <div class="comp-badge">Ризики без підготовки</div>
+                <h3>Чого побоюється бізнес?</h3>
+                <ul class="comp-list">
+                    <li>
+                        <span class="comp-icon">✕</span>
+                        <div>
+                            <strong>Втрата критичних даних</strong>
+                            <p>Залишки, історія продажів та борги можуть просто "зникнути" при перенесенні.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon">✕</span>
+                        <div>
+                            <strong>Сміття в довідниках</strong>
+                            <p>Дублікати контрагентів та некоректні артикули товарів переїдуть у нову систему.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon">✕</span>
+                        <div>
+                            <strong>Саботаж з боку персоналу</strong>
+                            <p>Співробітники не розуміють нову програму і продовжують працювати в Excel.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon">✕</span>
+                        <div>
+                            <strong>Зупинка відвантажень</strong>
+                            <p>Бізнес "стоїть" тижнями, поки налаштовуються базові процеси.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
 
-    <section class="section" style="background: var(--bg-light-blue);">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Чому саме SAP Business One</h2>
-            <div class="mig-grid-4">
-                <div class="item-card"><h4>Масштабованість</h4><p>Ріст без меж.</p></div>
-                <div class="item-card"><h4>Міжнародність</h4><p>Світовий стандарт.</p></div>
-                <div class="item-card"><h4>Єдина база</h4><p>Без хаосу.</p></div>
-                <div class="item-card"><h4>Локалізація</h4><p>Під Україну.</p></div>
+            <div class="comp-card solution-side">
+                <div class="comp-badge active">Як ми це закриваємо</div>
+                <h3>Рішення від Hygge System</h3>
+                <ul class="comp-list">
+                    <li>
+                        <span class="comp-icon check">✓</span>
+                        <div>
+                            <strong>Тестова міграція</strong>
+                            <p>Проводимо 2-3 пробні завантаження, щоб перевірити кожну цифру до фінального запуску.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon check">✓</span>
+                        <div>
+                            <strong>Нормалізація даних</strong>
+                            <p>Вичищаємо та структуруємо вашу базу перед імпортом за допомогою наших скриптів.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon check">✓</span>
+                        <div>
+                            <strong>Адаптивне навчання</strong>
+                            <p>Проводимо воркшопи для команди та готуємо індивідуальні інструкції для кожного відділу.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="comp-icon check">✓</span>
+                        <div>
+                            <strong>Поетапний запуск</strong>
+                            <p>Впроваджуємо модулі поступово, щоб ваші продажі не зупинялися ні на хвилину.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    
 
     <section class="cta" id="contacts">
             <div class="container cta-wrapper">

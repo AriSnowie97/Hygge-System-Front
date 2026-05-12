@@ -52,7 +52,7 @@
                 <li><a href="sap-b1.html">Інжиніринг</a></li>
                 <li><a href="sap-b1.html">Легка промисловість</a></li>
                 <li><a href="sap-b1.html">Аерокосмічна та оборонна галузь</a></li>
-                <li><a href="sap-b1.html">Дивитись всі</a></li>
+                <li><a href="sap-b1.html" style="font-weight: 900; color:blue;">Дивитись всі</a></li>
             </ul>
         </div>
 
@@ -68,7 +68,8 @@
 </div>
                 </li>
                 <li><a href="sap-b1.html">SAP Business One</a></li>
-                <li><a href="migration.html">Перехід з інших програм</a></li>
+                <li><a href="migration.html" class="nav-btn-special">Перехід з інших програм</a></li>
+                <li><a href="promos.html" class="nav-promo-highlight">Акції</a></li>
                 <li class="nav-item simple-dropdown">
                     <a href="#" class="nav-link">Про нас</a>
                     <div class="simple-menu">
@@ -76,7 +77,6 @@
                             <li><a href="cases.html">Кейси</a></li>
                             <li><a href="#contacts">Контакти</a></li>
                             <li><a href="blog.html">Блог</a></li>
-                            <li><a href="promos.html">Акції</a></li>
                         </ul>
                     </div>
                 </li>
@@ -261,25 +261,30 @@
         </div>
     </section>
 
-    <section class="section" style="background: var(--bg-light-blue)">
-        <div class="container">
-            <h2 style="text-align:center">Як ми впроваджуємо систему</h2>
-            <div class="comparison-wrapper">
-                 <div class="comparison-card">
-                     <h3>1. Аудит та Дизайн</h3>
-                     <p>Вивчаємо ваші процеси та малюємо майбутню модель роботи.</p>
-                 </div>
-                 <div class="comparison-card">
-                     <h3>2. Налаштування</h3>
-                     <p>Переносимо дані, налаштовуємо модулі та права доступу.</p>
-                 </div>
-                 <div class="comparison-card">
-                     <h3>3. Навчання та запуск</h3>
-                     <p>Навчаємо команду та супроводжуємо перший місяць роботи.</p>
-                 </div>
+    <section class="cta" id="contacts">
+            <div class="container cta-wrapper">
+                <div class="cta-text">
+                    <h2>Запросити консультацію</h2>
+                    <p>Залиште заявку, і ми проведемо аналіз вашої системи безкоштовно.</p>
+                </div>
+                
+                <form class="cta-form" action="#" method="POST">
+                    <fieldset style="border:none; padding:0; margin:0;">
+                        <legend class="sr-only">Форма заявки</legend>
+                        <div class="form-group">
+                            <label for="name">Ім'я</label>
+                            <input type="text" id="name" name="name" placeholder="Олександр" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Телефон або Email</label>
+                            <input type="text" id="contact" name="contact" placeholder="+380... або email" required>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Записатись на консультацію</button>
+                        <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small></p>
+                    </fieldset>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
     <footer class="footer">
         <div class="container footer-grid">

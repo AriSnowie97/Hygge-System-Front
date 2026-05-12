@@ -2561,3 +2561,193 @@ section.inner-hero {
     height: 300px !important;
     font-size: 0.8rem;
 }
+/* Стили только для кнопки "Перехід з інших програм" */
+.nav-links a.nav-btn-special {
+    background: var(--accent-gradient) !important; /* Твой сине-фиолетовый градиент */
+    color: #ffffff !important;                     /* Белый текст */
+    border: none !important;                        /* Убираем стандартную рамку */
+    padding: 10px 20px !important;                 /* Немного увеличиваем отступы */
+    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.3);  /* Добавляем мягкое свечение */
+}
+
+/* Эффект при наведении именно для этой кнопки */
+.nav-links a.nav-btn-special:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 71, 255, 0.4);
+    opacity: 0.9;
+}
+
+/* Стиль для кнопки Акции: обводка и красный текст */
+.nav-links a.nav-promo-highlight {
+    color: #ff4d4d !important;             /* Ярко-красный текст */
+    border: 2px solid #ff4d4d !important;  /* Красная рамка */
+    background: transparent !important;    /* Прозрачный фон */
+    padding: 8px 16px !important;
+    font-weight: 800 !important;           /* Делаем текст жирнее */
+    transition: all 0.3s ease;
+}
+
+.nav-links a.nav-promo-highlight:hover {
+    background: #ff4d4d !important;        /* При наведении закрашивается красным */
+    color: #ffffff !important;             /* Текст становится белым */
+}
+
+/* =======================================================
+   БЛОК: БЕЗПЕКА ПЕРЕХОДУ (РИЗИКИ VS РІШЕННЯ)
+   ======================================================= */
+
+/* Контейнер сітки */
+#migration-page .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+    align-items: stretch;
+}
+
+/* Загальний стиль карток */
+#migration-page .comp-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+    padding: 50px;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Акцентна права картка (Рішення) */
+#migration-page .solution-side {
+    background: linear-gradient(145deg, #ffffff 0%, #f4f7ff 100%);
+    border: 2px solid var(--accent-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Мітки (баджі) зверху */
+#migration-page .comp-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #f1f3f5;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #868e96;
+    align-self: flex-start;
+}
+
+#migration-page .comp-badge.active {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+#migration-page .comp-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+/* Список елементів */
+#migration-page .comp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#migration-page .comp-list li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Круглі іконки (X та Check) */
+#migration-page .comp-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 900;
+    font-size: 0.9rem;
+    background: #ffe3e3;
+    color: #fa5252;
+}
+
+#migration-page .comp-icon.check {
+    background: #ebfbee;
+    color: #40c057;
+}
+
+/* Тексти всередині списку */
+#migration-page .comp-list strong {
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+#migration-page .comp-list p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Адаптив для мобільних пристроїв */
+@media (max-width: 992px) {
+    #migration-page .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    #migration-page .comp-card {
+        padding: 35px 25px;
+    }
+    
+    #migration-page .comp-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+}
+
+/* === КОМПАКТНЕ МЕГА-МЕНЮ === */
+
+/* 1. Зменшуємо загальний контейнер меню */
+.mega-menu {
+    padding: 25px 35px !important; /* Було 40px, зменшили відступи */
+    max-width: 1000px !important;  /* Трохи звузили загальну ширину */
+}
+
+/* 2. Зменшуємо відстань між колонками */
+.mega-menu-container {
+    gap: 25px !important; /* Було 40px, зробили колонки ближче одна до одної */
+}
+
+/* 3. Зменшуємо заголовки колонок (ФУНКЦІОНАЛ SAP тощо) */
+.mega-column h4 {
+    font-size: 0.9rem !important; /* Було 1rem */
+    margin-bottom: 15px !important; /* Менше простору до списку */
+    padding-left: 10px !important;
+}
+
+/* 4. Зменшуємо шрифт та відступи у списках */
+.mega-column ul li {
+    margin-bottom: 8px !important; /* Було 12px, рядки стали щільнішими */
+}
+
+.mega-column ul li a {
+    font-size: 0.88rem !important; /* Було 0.95rem - текст став акуратнішим */
+    padding: 3px 0 !important;
+}
+
+}
