@@ -2746,11 +2746,10 @@ section.inner-hero {
 }
 
 .mega-column ul li a {
-    font-size: 0.88rem !important; /* Було 0.95rem - текст став акуратнішим */
+    font-size: 0.88rem !important;
     padding: 3px 0 !important;
 }
 
-}
 
 /* =======================================================
    PRODUCT-CARD PAGE STYLES
@@ -2845,10 +2844,35 @@ section.inner-hero {
     overflow: hidden;
 }
 
+.pc-hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.pc-hero-visual {
+    position: relative;
+}
+
+.pc-hero-visual .mockup-placeholder {
+    height: 420px;
+    overflow: hidden;
+}
+
+.pc-hero-visual .mockup-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 24px;
+}
+
 .pc-feature-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 85vh;
+    min-height: 520px;
 }
 
 .pc-feature-image {
@@ -3021,8 +3045,8 @@ section.inner-hero {
     text-align: center;
     font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 60px;
-    margin-top: -30px;
+    margin-bottom: 50px;
+    margin-top: 0;
 }
 
 /* --- ЯК ОТРИМАТИ ДЕМО --- */
@@ -3211,6 +3235,15 @@ section.inner-hero {
 
 /* --- АДАПТИВ PRODUCT-CARD --- */
 @media (max-width: 992px) {
+    .pc-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pc-hero-visual {
+        display: none;
+    }
+
     .pc-feature-grid {
         grid-template-columns: 1fr;
         min-height: auto;
