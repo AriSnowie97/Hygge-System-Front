@@ -1968,8 +1968,74 @@ section.inner-hero {
 }
 
 .mega-menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Секція карток програм вгорі мега-меню */
+.mega-products-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 71, 255, 0.08);
+}
+
+.mega-product-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    color: var(--text-color);
+    background: transparent;
+}
+
+.mega-product-card:hover {
+    background: rgba(0, 71, 255, 0.04);
+    border-color: rgba(0, 71, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 71, 255, 0.08);
+    color: var(--text-color);
+    padding-left: 16px;
+}
+
+.mega-product-img {
+    width: 56px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    background: var(--bg-light-blue);
+}
+
+.mega-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mega-product-info strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+
+.mega-product-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Колонки посилань унизу */
+.mega-links-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
@@ -2004,7 +2070,25 @@ section.inner-hero {
 
 .mega-column ul li a:hover {
     color: var(--accent-blue);
-    padding-left: 8px; /* Небольшой эффект сдвига при наведении */
+    padding-left: 8px;
+}
+
+/* Адаптив карток у мега-меню */
+@media (max-width: 1200px) {
+    .mega-products-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .mega-products-row,
+    .mega-links-row {
+        grid-template-columns: 1fr;
+    }
+    .mega-product-card {
+        border: 1px solid var(--glass-border);
+        background: var(--glass-bg);
+    }
 }
 
 /* Адаптив: на мобилках лучше превратить в обычный список или аккордеон */
