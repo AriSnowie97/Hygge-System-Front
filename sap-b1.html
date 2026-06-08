@@ -1,102 +1,78 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Що таке SAP Business One? | Hygge System</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- ====== ШАПКА (копія з sap-b1.html) ====== -->
     <header class="navbar">
         <a href="index.html" class="logo">Hygge<strong>System</strong></a>
-        
+
         <button class="burger-btn" id="burger-btn" aria-label="Відкрити меню">
             <span></span><span></span><span></span>
         </button>
-        
+
         <nav class="nav-container">
             <ul class="nav-links">
                 <li><a href="index.html">Головна</a></li>
                 <li class="nav-item dropdown">
-                <a href="#" class="nav-link">Програми</a>
+                    <a href="#" class="nav-link">Програми</a>
                     <div class="mega-menu">
-    <div class="mega-menu-container">
-        
-        <!-- Картки програм -->
-        <div class="mega-products-row">
-            <a href="product-card.html" class="mega-product-card">
-                                    <img class="mega-product-img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=120&q=80" alt="Продажі та CRM">
-                                    <div class="mega-product-info">
-                                        <strong>Продажі та CRM</strong>
-                                        <span>Максимально повне ведення будь-якого клієнта в SAP Business One</span>
-                </div>
-            </a>
-            <a href="product-card.html" class="mega-product-card">
-                                    <img class="mega-product-img" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=120&q=80" alt="Склад">
-                                    <div class="mega-product-info">
-                                        <strong>Склад</strong>
-                                        <span>Прозорість роботи складу та контроль запасів в SAP Business One</span>
-                </div>
-            </a>
-            <a href="product-card.html" class="mega-product-card">
-                                    <img class="mega-product-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&q=80" alt="Фінанси">
-                                    <div class="mega-product-info">
-                                        <strong>Фінанси</strong>
-                                        <span>Розкрийте силу управління фінансами в SAP Business One</span>
-                </div>
-            </a>
-        </div>
+                        <div class="mega-menu-container">
+                            <!-- Колонки посилань -->
+                            <div class="mega-links-row">
 
-        <!-- Колонки посилань -->
-        <div class="mega-links-row">
+                                <div class="mega-column">
+                                    <h4>Функціонал SAP</h4>
+                                    <ul>
 
-        <div class="mega-column">
-            <h4>Функціонал SAP</h4>
-            <ul>
+                                        <li><a href="product-card.html">Виробництво</a></li>
+                                        <li><a href="product-card.html">MRP</a></li>
+                                        <li><a href="product-card.html">Закупівлі та SRM</a></li>
+                                        <li><a href="product-card.html">Сервісне обслуговування</a></li>
+                                        <li><a href="product-card.html">Управління проектами</a></li>
 
-                <li><a href="sap-b1.html">Виробництво</a></li>
-                <li><a href="sap-b1.html">MRP</a></li>
-                <li><a href="sap-b1.html">Закупівлі та SRM</a></li>
-                <li><a href="sap-b1.html">Сервісне обслуговування</a></li>
-                <li><a href="sap-b1.html">Управління проектами</a></li>
+                                        <li><a href="product-card.html">Аналітика та звітність</a></li>
+                                        <li><a href="product-card.html">Мобільні рішення</a></li>
+                                        <li><a href="product-card.html">Intercompany</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Індустріальні рішення</h4>
+                                    <ul>
+                                        <li><a href="product-card.html">Виробництво харчових продуктів</a></li>
+                                        <li><a href="product-card.html">FMCG та дистрибуція</a></li>
+                                        <li><a href="product-card.html">Управління ІТ-бізнесом</a></li>
+                                        <li><a href="product-card.html">Будівництво</a></li>
+                                        <li><a href="product-card.html">Автомотів</a></li>
+                                        <li><a href="product-card.html">Інжиніринг</a></li>
+                                        <li><a href="product-card.html">Легка промисловість</a></li>
+                                        <li><a href="product-card.html">Аерокосмічна та оборонна галузь</a></li>
+                                        <li><a href="product-card.html" style="font-weight: 900; color:blue;">Дивитись
+                                                всі</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Локалізація для України</h4>
+                                    <ul>
+                                        <li><a href="product-card.html">Зарплата та кадри</a></li>
+                                        <li><a href="product-card.html">Бухгалтерський та податковий облік</a></li>
+                                    </ul>
+                                </div>
 
-                <li><a href="sap-b1.html">Аналітика та звітність</a></li>
-                <li><a href="sap-b1.html">Мобільні рішення</a></li>
-                <li><a href="sap-b1.html">Intercompany</a></li>
-            </ul>
-        </div>
+                            </div><!-- /mega-links-row -->
 
-        <div class="mega-column">
-            <h4>Індустріальні рішення</h4>
-            <ul>
-                <li><a href="sap-b1.html">Виробництво харчових продуктів</a></li>
-                <li><a href="sap-b1.html">FMCG та дистрибуція</a></li>
-                <li><a href="sap-b1.html">Управління ІТ-бізнесом</a></li>
-                <li><a href="sap-b1.html">Будівництво</a></li>
-                <li><a href="sap-b1.html">Автомотів</a></li>
-                <li><a href="sap-b1.html">Інжиніринг</a></li>
-                <li><a href="sap-b1.html">Легка промисловість</a></li>
-                <li><a href="sap-b1.html">Аерокосмічна та оборонна галузь</a></li>
-                <li><a href="sap-b1.html" style="font-weight: 900; color:blue;">Дивитись всі</a></li>
-            </ul>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="mega-column">
-            <h4>Локалізація для України</h4>
-            <ul>
-                <li><a href="sap-b1.html">Зарплата та кадри</a></li>
-                <li><a href="sap-b1.html">Бухгалтерський та податковий облік</a></li>
-            </ul>
-        </div>
-
-        </div><!-- /mega-links-row -->
-
-    </div>
-</div>
                 </li>
-
                 <li><a href="sap-b1.html">SAP Business One</a></li>
                 <li><a href="migration.html" class="nav-btn-special">Перехід з інших програм</a></li>
                 <li><a href="promos.html" class="nav-promo-highlight">Акції</a></li>
@@ -120,7 +96,8 @@
                 <div class="hero-text">
                     <span class="badge">Міжнародний стандарт ERP</span>
                     <h1>SAP Business One: Інтелектуальне управління бізнесом</h1>
-                    <p>Єдина екосистема для масштабування компанії, яка об'єднує фінанси, продажі, склад та виробництво в одному вікні. Рішення, якому довіряють понад 75,000 компаній у світі.</p>
+                    <p>Єдина екосистема для масштабування компанії, яка об'єднує фінанси, продажі, склад та виробництво
+                        в одному вікні. Рішення, якому довіряють понад 75,000 компаній у світі.</p>
                     <div class="hero-btns">
                         <a href="#consultation" class="btn-primary">Замовити демо</a>
                         <a href="#modules" class="btn-secondary">Вивчити модулі</a>
@@ -140,8 +117,13 @@
             <div class="sap-intro-grid">
                 <div class="intro-text">
                     <h2>Більше ніж просто облік</h2>
-                    <p><strong>SAP Business One</strong> — це не окрема бухгалтерська програма, а комплексне рішення для управління підприємством (ERP). Вона розроблена спеціально для середнього та малого бізнесу, який прагне працювати за світовими стандартами.</p>
-                    <p>На відміну від локального софту, SAP B1 побудована на принципі <strong>єдиного джерела істини</strong>. Це означає, що дані, введені у відділі продажу, миттєво відображаються у фінансовому звіті та плані закупівель на складі без будь-яких ручних переносів чи синхронізацій.</p>
+                    <p><strong>SAP Business One</strong> — це не окрема бухгалтерська програма, а комплексне рішення для
+                        управління підприємством (ERP). Вона розроблена спеціально для середнього та малого бізнесу,
+                        який прагне працювати за світовими стандартами.</p>
+                    <p>На відміну від локального софту, SAP B1 побудована на принципі <strong>єдиного джерела
+                            істини</strong>. Це означає, що дані, введені у відділі продажу, миттєво відображаються у
+                        фінансовому звіті та плані закупівель на складі без будь-яких ручних переносів чи синхронізацій.
+                    </p>
                 </div>
                 <div class="intro-stats">
                     <div class="stat-card glass-card">
@@ -161,24 +143,28 @@
         <div class="container">
             <h2 class="section-title">Функціональні можливості системи</h2>
             <div class="modules-grid">
-                
+
                 <div class="module-card item-card">
                     <div class="card-body">
                         <div class="module-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="12" y1="1" x2="12" y2="23"></line>
                                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                             </svg>
                         </div>
                         <h3>Фінанси та бухгалтерський облік</h3>
-                        <p>Автоматизація всіх основних бухгалтерських операцій: від плану рахунків та проводок до багатовалютної звітності та податкового обліку. Повний контроль грошових потоків у реальному часі.</p>
+                        <p>Автоматизація всіх основних бухгалтерських операцій: від плану рахунків та проводок до
+                            багатовалютної звітності та податкового обліку. Повний контроль грошових потоків у реальному
+                            часі.</p>
                     </div>
                 </div>
 
                 <div class="module-card item-card">
                     <div class="card-body">
                         <div class="module-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -186,35 +172,42 @@
                             </svg>
                         </div>
                         <h3>Продажі та CRM</h3>
-                        <p>Керуйте всім життєвим циклом клієнта. Відстежуйте потенційні угоди (Opportunities), історію комунікацій, сервісне обслуговування та аналітику продажів у розрізі менеджерів.</p>
+                        <p>Керуйте всім життєвим циклом клієнта. Відстежуйте потенційні угоди (Opportunities), історію
+                            комунікацій, сервісне обслуговування та аналітику продажів у розрізі менеджерів.</p>
                     </div>
                 </div>
 
                 <div class="module-card item-card">
                     <div class="card-body">
                         <div class="module-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
                                 <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                         </div>
                         <h3>Запаси та Дистрибуція</h3>
-                        <p>Точний облік складських залишків, керування декількома складами, облік за серійними номерами та партіями. Оптимізація закупівель на основі прогнозів споживання.</p>
+                        <p>Точний облік складських залишків, керування декількома складами, облік за серійними номерами
+                            та партіями. Оптимізація закупівель на основі прогнозів споживання.</p>
                     </div>
                 </div>
 
                 <div class="module-card item-card">
                     <div class="card-body">
                         <div class="module-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
                                 <rect x="6" y="2" width="12" height="8" rx="2" ry="2"></rect>
                                 <line x1="12" y1="10" x2="12" y2="14"></line>
                             </svg>
                         </div>
                         <h3>Виробництво та MRP</h3>
-                        <p>Планування потреби в матеріалах (MRP), створення специфікацій (BOM), керування замовленнями на виробництво та розрахунок точної собівартості готової продукції.</p>
+                        <p>Планування потреби в матеріалах (MRP), створення специфікацій (BOM), керування замовленнями
+                            на виробництво та розрахунок точної собівартості готової продукції.</p>
                     </div>
                 </div>
 
@@ -227,15 +220,19 @@
             <div class="tech-layout">
                 <div class="tech-image">
                     <div class="hana-badge">Powered by SAP HANA</div>
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SAP HANA Analytics">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                        alt="SAP HANA Analytics">
                 </div>
                 <div class="tech-content">
                     <h2>Швидкість SAP HANA та Аналітика</h2>
-                    <p>Завдяки технології обробки даних у пам'яті (In-Memory), ви отримуєте звіти за мілісекунди, навіть якщо у вас мільйони записів.</p>
+                    <p>Завдяки технології обробки даних у пам'яті (In-Memory), ви отримуєте звіти за мілісекунди, навіть
+                        якщо у вас мільйони записів.</p>
                     <ul class="check-list">
-                        <li><strong>Інтерактивні дашборди:</strong> бачте ключові показники (KPI) на головному екрані.</li>
+                        <li><strong>Інтерактивні дашборди:</strong> бачте ключові показники (KPI) на головному екрані.
+                        </li>
                         <li><strong>Прогнозний аналіз:</strong> система підкаже, коли товар закінчиться на складі.</li>
-                        <li><strong>Мобільність:</strong> працюйте через Web-клієнт або мобільний додаток з будь-якої точки світу.</li>
+                        <li><strong>Мобільність:</strong> працюйте через Web-клієнт або мобільний додаток з будь-якої
+                            точки світу.</li>
                     </ul>
                 </div>
             </div>
@@ -245,8 +242,9 @@
     <section class="deployment-section">
         <div class="container">
             <h2 style="text-align: center;">Де розмістити систему?</h2>
-            <p style="text-align: center; color: var(--text-muted);">Виберіть варіант, який найкраще підходить вашому масштабу та ІТ-стратегії</p>
-            
+            <p style="text-align: center; color: var(--text-muted);">Виберіть варіант, який найкраще підходить вашому
+                масштабу та ІТ-стратегії</p>
+
             <div class="comparison-wrapper">
                 <div class="comparison-card">
                     <h3>On-Premise</h3>
@@ -279,42 +277,67 @@
         <div class="container">
             <h2 style="text-align:center">Основні можливості SAP Business One</h2>
             <div class="features-grid-8">
-                <div class="item-card feature-mini-card"><h4>Фінанси</h4><p>Управління капіталом та звітність</p></div>
-                <div class="item-card feature-mini-card"><h4>CRM</h4><p>Продажі та лояльність клієнтів</p></div>
-                <div class="item-card feature-mini-card"><h4>Закупівлі</h4><p>Контроль витрат та постачальників</p></div>
-                <div class="item-card feature-mini-card"><h4>Склад</h4><p>Оптимізація залишків та логістика</p></div>
-                <div class="item-card feature-mini-card"><h4>Виробництво</h4><p>MRP та контроль ресурсів</p></div>
-                <div class="item-card feature-mini-card"><h4>Проекти</h4><p>Облік робочого часу та етапів</p></div>
-                <div class="item-card feature-mini-card"><h4>Аналітика</h4><p>Звіти в реальному часі HANA</p></div>
-                <div class="item-card feature-mini-card"><h4>Мобільність</h4><p>Доступ через iOS та Android</p></div>
+                <div class="item-card feature-mini-card">
+                    <h4>Фінанси</h4>
+                    <p>Управління капіталом та звітність</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>CRM</h4>
+                    <p>Продажі та лояльність клієнтів</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Закупівлі</h4>
+                    <p>Контроль витрат та постачальників</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Склад</h4>
+                    <p>Оптимізація залишків та логістика</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Виробництво</h4>
+                    <p>MRP та контроль ресурсів</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Проекти</h4>
+                    <p>Облік робочого часу та етапів</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Аналітика</h4>
+                    <p>Звіти в реальному часі HANA</p>
+                </div>
+                <div class="item-card feature-mini-card">
+                    <h4>Мобільність</h4>
+                    <p>Доступ через iOS та Android</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="cta" id="contacts">
-            <div class="container cta-wrapper">
-                <div class="cta-text">
-                    <h2>Запросити консультацію</h2>
-                    <p>Залиште заявку, і ми проведемо аналіз вашої системи безкоштовно.</p>
-                </div>
-                
-                <form class="cta-form" action="#" method="POST">
-                    <fieldset style="border:none; padding:0; margin:0;">
-                        <legend class="sr-only">Форма заявки</legend>
-                        <div class="form-group">
-                            <label for="name">Ім'я</label>
-                            <input type="text" id="name" name="name" placeholder="Олександр" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">Телефон або Email</label>
-                            <input type="text" id="contact" name="contact" placeholder="+380... або email" required>
-                        </div>
-                        <button type="submit" class="btn-primary btn-submit">Записатись на консультацію</button>
-                        <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small></p>
-                    </fieldset>
-                </form>
+        <div class="container cta-wrapper">
+            <div class="cta-text">
+                <h2>Запросити консультацію</h2>
+                <p>Залиште заявку, і ми проведемо аналіз вашої системи безкоштовно.</p>
             </div>
-        </section>
+
+            <form class="cta-form" action="#" method="POST">
+                <fieldset style="border:none; padding:0; margin:0;">
+                    <legend class="sr-only">Форма заявки</legend>
+                    <div class="form-group">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" placeholder="Олександр" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Телефон або Email</label>
+                        <input type="text" id="contact" name="contact" placeholder="+380... або email" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">Записатись на консультацію</button>
+                    <p class="form-note"><small>Натискаючи кнопку, ви погоджуєтеся з політикою конфіденційності.</small>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container footer-grid">
@@ -322,12 +345,21 @@
                 <a href="/" class="logo">Hygge<strong style="color:var(--accent-blue)">System</strong></a>
                 <p>Надійне впровадження міжнародної ERP-системи SAP Business One для українського бізнесу.</p>
                 <div class="socials">
-                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
-                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg></a>
+                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg></a>
+                    <a href="#!"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg></a>
                 </div>
             </div>
-            
+
             <div class="footer-col">
                 <h3>Карта сайту</h3>
                 <ul>
@@ -338,20 +370,34 @@
                     <li><a href="cases.html">Кейси</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-col">
                 <h3>Контакти</h3>
                 <ul class="contact-info">
                     <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
                         <a href="tel:+380000000000">+38 (000) 000-00-00</a>
                     </li>
                     <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
                         <a href="mailto:hello@hyggesystem.com">hello@hyggesystem.com</a>
                     </li>
                     <li>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                         м. Київ, вул. Хрещатик, 1
                     </li>
                 </ul>
@@ -361,6 +407,7 @@
             <p><small>&copy; 2026 Hygge System. Всі права захищені.</small></p>
         </div>
     </footer>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
